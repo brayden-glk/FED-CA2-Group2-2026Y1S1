@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../../assets/js/navbar.js"></script>
+    <script defer src="../../assets/js/attraction2.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
+    <title>Attraction2</title>
+</head>
+
+<body class="flex min-h-screen flex-col bg-gray-50 font-['Inter']">
+
+    <header class="h-20">
+        <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
+            <div class="flex h-20 items-center justify-between px-6 md:px-4">
+                <div class="md:ms-5">
+                    <a href="../../index.html" aria-label="Singapore Tourism home" class="flex flex-row gap-1.5 md:gap-3">
+                        <img src="../../assets/images/sg.png" alt="Singapore Tourism" class="h-9 w-9 object-cover md:h-12 md:w-12">
+                        <span class="m-0 pt-0.5 text-xs font-semibold md:mt-3 md:p-0 md:text-base">Singapore <br
+                                class="md:hidden">Tourism</span>
+                    </a>
+                </div>
+
+                <ul class="hidden h-full items-center me-5 text-xl font-semibold md:flex md:gap-10 lg:gap-14">
+                    <li id="explore-item" class="flex h-full items-center">
+                        <button id="explore-trigger" type="button" aria-haspopup="true" aria-expanded="false"
+                            class="border-b-2 border-transparent">Explore</button>
+                    </li>
+                    <li class="h-full flex items-center">
+                        <a href="#" class="border-b-2 border-transparent hover:border-red-500">Practical tips</a>
+                    </li>
+                    <li class="h-full flex items-center">
+                        <a href="#" class="border-b-2 border-transparent hover:border-red-500">Contact us</a>
+                    </li>
+                </ul>
+
+                <button id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden">
+                    <img src="../../assets/icons/menu.svg" alt="Menu" class="h-6 w-6">
+                </button>
+            </div>
+
+            <div id="desktop-dropdown" class="max-h-0 overflow-hidden transition-[max-height] duration-300">
+                <div class="grid grid-cols-3 ms-5 gap-22 px-6 pt-4 pb-4 text-xl lg:ms-7">
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Attractions</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="#"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Landmarks</a>
+                            </li>
+                            <li><a href="#"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Nature
+                                    &amp; Wildlife</a></li>
+                            <li><a href="#"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Photo
+                                    spots</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Culture &amp; Heritage</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="#"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Heritage
+                                    Districts</a></li>
+                            <li><a href="#"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Religious
+                                    Heritage Sites</a></li>
+                            <li><a href="#"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Museums
+                                    &amp; Cultural Streets</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Food &amp; Shopping</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="#"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Singapore's
+                                    food culture</a></li>
+                            <li><a href="#"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Shopping
+                                    experience</a></li>
+                            <li><a href="#"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Food
+                                    &amp; Shopping tips</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="mobile-menu"
+                class="max-h-0 overflow-hidden bg-white transition-[max-height] duration-300 md:hidden">
+                <ul class="flex flex-col gap-3 px-6 py-5 text-lg font-semibold">
+                    <li>
+                        <button type="button"
+                            class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Attractions
+                        </button>
+                        <ul
+                            class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="#"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature
+                                    &amp; Wildlife</a></li>
+                            <li><a href="#"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Iconic
+                                    Landmarks</a></li>
+                            <li><a href="#"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Photo
+                                    spots</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button"
+                            class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Culture
+                            &amp; Heritage</button>
+                        <ul
+                            class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="#"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Heritage
+                                    Districts</a></li>
+                            <li><a href="#"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Religious
+                                    Heritage Sites</a></li>
+                            <li><a href="#"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Museums
+                                    and Cultural Streets</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button"
+                            class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Food
+                            &amp; Shopping</button>
+                        <ul
+                            class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="#"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Singapore's
+                                    food culture</a></li>
+                            <li><a href="#"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Shopping
+                                    experience</a></li>
+                            <li><a href="#"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Food
+                                    &amp; Shopping tips</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"
+                            class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Practical
+                            tips</a></li>
+                    <li><a href="#"
+                            class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Contact
+                            us</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+        <!-- Singapore Zoo -->
+        <article
+            class="mt-10 overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm md:grid md:grid-cols-2">
+            <div class="carousel relative h-64 overflow-hidden md:h-full"><img
+                    src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=80"
+                    alt="Singapore Zoo" class="carousel-image h-full w-full object-cover"><img
+                    src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=1000&q=80"
+                    alt="Zoo animals" class="carousel-image hidden h-full w-full object-cover">
+                    <button
+                    class="previous absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 font-bold shadow transition hover:bg-red-500 hover:text-white">
+                    </button>
+                    
+                    <button
+                    class="next absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 font-bold shadow transition hover:bg-red-500 hover:text-white">
+                    </button>
+            </div>
+            <div class="flex flex-col justify-center p-7 md:p-10">
+                <p class="text-sm font-bold uppercase tracking-[0.16em] text-red-500">Wildlife</p>
+                <h2 class="mt-2 text-3xl font-bold">Singapore Zoo</h2>
+                <p class="mt-4 leading-7 text-gray-600">Meet animals in spacious, naturalistic habitats at one of the
+                    world's
+                    best-known rainforest zoos.</p>
+            </div>
+        </article>
+
+        <!-- Singapore Botanic Gardens -->
+        <article
+            class="mt-8 overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm md:grid md:grid-cols-2">
+            <div class="carousel relative h-64 overflow-hidden md:order-2 md:h-full">
+                
+                    <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
+                    alt="Singapore Botanic Gardens" class="carousel-image h-full w-full object-cover">
+                    
+                    <img
+                    src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=80"
+                    alt="Tropical garden" class="carousel-image hidden h-full w-full object-cover">
+                    
+                    <button
+                    class="previous absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 font-bold shadow transition hover:bg-red-500 hover:text-white"></button>
+                    
+                    <button
+                    class="next absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 font-bold shadow transition hover:bg-red-500 hover:text-white"></button>
+            </div>
+            <div class="flex flex-col justify-center p-7 md:p-10">
+                <p class="text-sm font-bold uppercase tracking-[0.16em] text-red-500">Nature</p>
+                <h2 class="mt-2 text-3xl font-bold">Singapore Botanic Gardens</h2>
+                <p class="mt-4 leading-7 text-gray-600">Enjoy a relaxing walk through a UNESCO World Heritage garden
+                    filled with
+                    tropical plants, lawns and orchids.</p>
+            </div>
+        </article>
+
+        <!-- Bird Paradise -->
+        <article
+            class="mt-8 overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm md:grid md:grid-cols-2 mb-20">
+            <div class="carousel relative h-64 overflow-hidden md:h-full">
+                <img
+                    src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=1000&q=80"
+                    alt="Bird Paradise" class="carousel-image h-full w-full object-cover">
+                    <img
+                    src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=1000&q=80"
+                    alt="Colourful bird" class="carousel-image hidden h-full w-full object-cover">
+                    
+                    <button
+                    class="previous absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 font-bold shadow transition hover:bg-red-500 hover:text-white"></button>
+                    
+                    <button
+                    class="next absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 px-3 py-2 font-bold shadow transition hover:bg-red-500 hover:text-white"></button>
+            </div>
+            <div class="flex flex-col justify-center p-7 md:p-10">
+                <p class="text-sm font-bold uppercase tracking-[0.16em] text-red-500">Birdlife</p>
+                <h2 class="mt-2 text-3xl font-bold">Bird Paradise</h2>
+                <p class="mt-4 leading-7 text-gray-600">See colourful birds from around the world in spacious aviaries
+                    designed
+                    to feel like their natural habitats.</p>
+            </div>
+        </article>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800">
+        <div
+            class="flex flex-col items-center gap-1 p-3 text-xs text-white md:flex-row md:justify-between md:gap-0 md:p-5 md:text-sm lg:p-6 lg:text-base">
+            <p>Singapore Tourism</p>
+            <p>&copy; 2026. All rights reserved</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

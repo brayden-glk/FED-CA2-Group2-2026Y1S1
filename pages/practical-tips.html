@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../assets/js/practical-tips.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
+    <title>Practical Tips | Singapore Tourism</title>
+</head>
+
+<body class="flex min-h-screen flex-col bg-gray-50 font-['Inter']">
+
+    <!-- Navigation -->
+    <header class="h-16 md:h-20">
+        <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
+            <div class="flex h-16 md:h-20 items-center justify-between px-6 md:px-4">
+                <div class="md:ms-5">
+                    <a href="../index.html" aria-label="Singapore Tourism home" class="flex flex-row gap-1.5 md:gap-3">
+                        <img src="../assets/images/sg.png" alt="Singapore Tourism" class="h-9 w-9 object-cover md:h-12 md:w-12">
+                        <span class="m-0 pt-0.5 text-xs font-semibold md:mt-3 md:p-0 md:text-base">Singapore <br class="md:hidden">Tourism</span>
+                    </a>
+                </div>
+
+                <ul class="hidden h-full items-center me-5 text-xl font-semibold md:flex md:gap-10 lg:gap-14">
+                    <li id="explore-item" class="flex h-full items-center">
+                        <button id="explore-trigger" type="button" aria-haspopup="true" aria-expanded="false" class="border-b-2 border-transparent">Explore</button>
+                    </li>
+                    <li class="h-full flex items-center">
+                        <a href="practical-tips.html" class="border-b-2 border-transparent hover:border-red-500">Practical tips</a>
+                    </li>
+                    <li class="h-full flex items-center">
+                        <a href="contact-us.html" class="border-b-2 border-transparent hover:border-red-500">Contact us</a>
+                    </li>
+                </ul>
+
+                <button id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden">
+                    <img src="../assets/images/menu.svg" alt="Menu" class="h-6 w-6">
+                </button>
+            </div>
+
+            <div id="desktop-dropdown" class="max-h-0 overflow-hidden transition-[max-height] duration-300">
+                <div class="grid grid-cols-3 ms-5 gap-22 px-6 pt-4 pb-4 text-xl lg:ms-7">
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Attractions</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="#" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Landmarks</a></li>
+                            <li><a href="#" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Nature &amp; Wildlife</a></li>
+                            <li><a href="attractions/photo-spots.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Photo spots</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Culture &amp; Heritage</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="#" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Heritage Districts</a></li>
+                            <li><a href="#" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Religious Heritage Sites</a></li>
+                            <li><a href="#" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Museums &amp; Cultural Streets</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Food &amp; Shopping</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="#" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Singapore's food culture</a></li>
+                            <li><a href="#" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Shopping experience</a></li>
+                            <li><a href="#" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Food &amp; Shopping tips</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="max-h-0 overflow-hidden bg-white transition-[max-height] duration-300 md:hidden">
+                <ul class="flex flex-col gap-3 px-6 py-5 text-lg font-semibold">
+                    <li>
+                        <button type="button" class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Attractions </button>
+                        <ul class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="#" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature &amp; Wildlife</a></li>
+                            <li><a href="#" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Iconic Landmarks</a></li>
+                            <li><a href="attractions/photo-spots.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Photo spots</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Culture &amp; Heritage</button>
+                        <ul class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="#" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Heritage Districts</a></li>
+                            <li><a href="#" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Religious Heritage Sites</a></li>
+                            <li><a href="#" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Museums and Cultural Streets</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Food &amp; Shopping</button>
+                        <ul class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="#" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Singapore's food culture</a></li>
+                            <li><a href="#" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Shopping experience</a></li>
+                            <li><a href="#" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Food &amp; Shopping tips</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="practical-tips.html" class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Practical tips</a></li>
+                    <li><a href="contact-us.html" class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Contact us</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+
+        <!-- Hero Banner -->
+        <section>
+            <div class="w-full overflow-hidden relative h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh]">
+                <img src="../assets/images/practical-tips-banner.jpg" alt="Changi tower" class=" scale-120 md:scale-100 h-full w-full object-cover object-[100%_45%]">
+                <div class="absolute z-10 inset-0 bg-black/40"></div>
+                <div class="z-20 inset-0 absolute flex flex-col justify-center items-center text-white">
+                    <h1 class="text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">Practical Tips</h1>
+                    <p class="text-sm sm:text-base md:text-xl lg:text-2xl">Everything you need for your trip to Singapore</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Access -->
+         <section>
+            <div class=" flex flex-col relative w-[90%] mx-auto my-6 md:hidden">
+                <h2 class="text-[10px] ps-2">Select a topic</h2>
+                <div id="mobile-quick-access-button" class="ps-3 text-xs bg-red-500 h-6 rounded-md flex text-start items-center shadow-md text-white justify-between pe-3">
+                    <span id="mobile-quick-access-text">Preparations before your trip</span>
+                    <img src="../assets/images/chevron-down-white.png" alt="white chevron" class="chevron-image h-4 w-4 transition-transform duration-300 rotate-0">
+                </div>
+                <ul id="mobile-quick-access-menu" class="overflow-hidden transition-all duration-300 w-full rounded-b-md flex flex-col text-start max-h-0 bg-white md:hidden shadow-md border border-gray-200 border-t-0 absolute left-auto top-full z-20">
+                    <li><button type="button" data-target="preparations" class="ps-3 text-xs">Preparations before your trip</button></li>
+                    <li><button type="button" data-target="payments" class="ps-3 text-xs">Payment methods & Currency</button></li>
+                    <li><button type="button" data-target="transport" class="ps-3 text-xs">Getting around Singapore</button></li>
+                    <li><button type="button" data-target="weather" class="ps-3 text-xs">Managing Singapore's weather</button></li>
+                    <li><button type="button" data-target="laws" class="ps-3 pb-1.5 text-xs">Local laws & Etiquette</button></li>
+                </ul>
+            </div>
+
+            <div class="my-8 w-4/5 mx-auto items-center rounded-b-md hidden md:grid">
+                <h2 class="text-sm ps-2">Jump to topic</h2>
+                <ul id="desktop-quick-access" class="grid grid-cols-5 h-full text-white bg-red-500 rounded-md border-2 border-red-500 gap-0.5 overflow-hidden">
+                    <li data-target="preparations" class="flex flex-col items-center justify-center">
+                        <img src="../assets/images/practical-tips-banner.jpg" class="h-20 lg:h-24 w-full overflow-hidden object-cover">
+                        <button type="button" class="text-xs">Preparations</button>
+                    </li>
+                    <li data-target="payments" class="flex flex-col items-center justify-center">
+                        <img src="../assets/images/practical-tips-banner.jpg" class="h-20 lg:h-24 w-full overflow-hidden object-cover">
+                        <button type="button" class="text-xs">Payments</button>
+                    </li>
+                    <li data-target="transport" class="flex flex-col items-center justify-center">
+                        <img src="../assets/images/practical-tips-banner.jpg" class="h-20 lg:h-24 w-full overflow-hidden object-cover">
+                        <button type="button" class="text-xs">Getting around</button>
+                    </li>
+                    <li data-target="weather" class="flex flex-col items-center justify-center">
+                        <img src="../assets/images/practical-tips-banner.jpg" class="h-20 lg:h-24 w-full overflow-hidden object-cover">
+                        <button type="button" class="text-xs">Weather</button>
+                    </li>
+                    <li data-target="laws" class="flex flex-col items-center justify-center">
+                        <img src="../assets/images/practical-tips-banner.jpg" class="h-20 lg:h-24 w-full overflow-hidden object-cover">
+                        <button type="button" class="text-xs">Local laws</button>
+                    </li>
+                </ul>
+            </div>
+         </section>
+
+        <!-- Tips section -->
+         <section class="w-[90%] mx-auto  md:w-4/5">
+            <div id="preparations" class="scroll-mt-20 mb-12">
+                <h2 class="font-bold text-xl md:text-2xl mb-1">Preparations</h2>
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+                    <img src="../assets/images/practical-tips-banner.jpg" alt="" class="object-cover aspect-4/1 object-center w-full md:w-2/5 md:aspect-4/3">
+                    <p class="flex-1 text-sm md:text-base leading-6 text-wrap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, placeat. Aspernatur, ipsum, consequatur mollitia veniam molestias consequuntur laborum ipsam nisi repudiandae odit ex expedita commodi ab quis nemo libero adipisci!</p>
+                </div>
+            </div>
+
+            <div id="payments" class="scroll-mt-20 mb-12">
+                <h2 class="font-bold text-xl md:text-2xl mb-1">Payments</h2>
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+                    <img src="../assets/images/practical-tips-banner.jpg" alt="" class="object-cover aspect-4/1 object-center w-full md:w-2/5 md:aspect-4/3">
+                    <p class="flex-1 text-sm md:text-base leading-6 text-wrap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, placeat. Aspernatur, ipsum, consequatur mollitia veniam molestias consequuntur laborum ipsam nisi repudiandae odit ex expedita commodi ab quis nemo libero adipisci!</p>
+                </div>
+            </div>
+
+            <div id="transport" class="scroll-mt-20 mb-12">
+                <h2 class="font-bold text-xl md:text-2xl mb-1">Getting around</h2>
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+                    <img src="../assets/images/practical-tips-banner.jpg" alt="" class="object-cover aspect-4/1 object-center w-full md:w-2/5 md:aspect-4/3">
+                    <p class="flex-1 text-sm md:text-base leading-6 text-wrap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, placeat. Aspernatur, ipsum, consequatur mollitia veniam molestias consequuntur laborum ipsam nisi repudiandae odit ex expedita commodi ab quis nemo libero adipisci!</p>
+                </div>
+            </div>
+
+            <div id="weather" class="scroll-mt-20 mb-12">
+                <h2 class="font-bold text-xl md:text-2xl mb-1">Weather</h2>
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+                    <img src="../assets/images/practical-tips-banner.jpg" alt="" class="object-cover aspect-4/1 object-center w-full md:w-2/5 md:aspect-4/3">
+                    <p class="flex-1 text-sm md:text-base leading-6 text-wrap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, placeat. Aspernatur, ipsum, consequatur mollitia veniam molestias consequuntur laborum ipsam nisi repudiandae odit ex expedita commodi ab quis nemo libero adipisci!</p>
+                </div>
+            </div>
+
+            <div id="laws" class="scroll-mt-20 mb-12">
+                <h2 class="font-bold text-xl md:text-2xl mb-1">Local laws</h2>
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+                    <img src="../assets/images/practical-tips-banner.jpg" alt="" class="object-cover aspect-4/1 object-center w-full md:w-2/5 md:aspect-4/3">
+                    <p class="flex-1 text-sm md:text-base leading-6 text-wrap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, placeat. Aspernatur, ipsum, consequatur mollitia veniam molestias consequuntur laborum ipsam nisi repudiandae odit ex expedita commodi ab quis nemo libero adipisci!</p>
+                </div>
+            </div>
+         </section>
+
+         <!-- Checklist -->
+          <section class="mb-16">
+            <div class="w-[90%] md:w-4/5 mx-auto bg-white shadow-md rounded-md border border-gray-200 px-5 pt-2 pb-3">
+                <h3 class="text-lg md:text-xl font-bold">Ready for your trip?</h3>
+                <ul id="trip-checklist" class="grid grid-rows-5 gap-2 text-sm md:text-base leading-10">
+                    <li class="flex items-center justify-between">
+                        <span>Checklist</span>
+                        <input type="checkbox" class="trip-checkbox h-3 w-3 accent-red-500 md:h-4 md:w-4">
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <span>Checklist</span>
+                        <input type="checkbox" class="trip-checkbox h-3 w-3 accent-red-500 md:h-4 md:w-4">
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <span>Checklist</span>
+                        <input type="checkbox" class="trip-checkbox h-3 w-3 accent-red-500 md:h-4 md:w-4">
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <span>Checklist</span>
+                        <input type="checkbox" class="trip-checkbox h-3 w-3 accent-red-500 md:h-4 md:w-4">
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <span>Checklist</span>
+                        <input type="checkbox" class="trip-checkbox h-3 w-3 accent-red-500 md:h-4 md:w-4">
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <span>Checklist</span>
+                        <input type="checkbox" class="trip-checkbox h-3 w-3 accent-red-500 md:h-4 md:w-4">
+                    </li>
+                </ul>
+                <p id="checklist-progress" class="mt-5 text-right text-xs md:text-sm text-gray-500">0/6 Completed</p>
+            </div>
+          </section>
+    </main>
+
+    <footer class="bg-gray-800 w-full">
+        <div class="flex flex-col items-center gap-1 p-3 text-xs text-white md:flex-row md:justify-between md:gap-0 md:p-5 md:text-sm lg:p-6 lg:text-base">
+            <p>Singapore Tourism</p>
+            <p>&copy; 2026. All rights reserved</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

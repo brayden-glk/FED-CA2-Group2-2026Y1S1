@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../../assets/js/navbar.js"></script>
+    <title>Religious Heritage Sites</title>
+</head>
+
+<body class="flex min-h-screen flex-col bg-white text-gray-900">
+
+    <header class="h-20">
+        <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
+            <div class="flex h-20 items-center justify-between px-6 md:px-4">
+                <div class="md:ms-5">
+                    <a href="../../index.html" aria-label="Singapore Tourism home" class="flex flex-row gap-1.5 md:gap-3">
+                        <img src="../../assets/images/sg.png" alt="Singapore Tourism" class="h-9 w-9 object-cover md:h-12 md:w-12">
+                        <span class="m-0 pt-0.5 text-xs font-semibold md:mt-3 md:p-0 md:text-base">Singapore <br class="md:hidden">Tourism</span>
+                    </a>
+                </div>
+
+                <ul class="hidden h-full items-center me-5 text-xl font-semibold md:flex md:gap-10 lg:gap-14">
+                    <li id="explore-item" class="flex h-full items-center">
+                        <button id="explore-trigger" type="button" aria-haspopup="true" aria-expanded="false" class="border-b-2 border-transparent">
+                            Explore
+                        </button>
+                    </li>
+                    <li class="flex h-full items-center">
+                        <a href="../../index.html" class="border-b-2 border-transparent hover:border-red-500">Practical tips</a>
+                    </li>
+                    <li class="flex h-full items-center">
+                        <a href="../../index.html" class="border-b-2 border-transparent hover:border-red-500">Contact us</a>
+                    </li>
+                </ul>
+
+                <button id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden">
+                    <img src="../../assets/images/menu.svg" alt="Menu" class="h-6 w-6">
+                </button>
+            </div>
+
+            <div id="desktop-dropdown" class="max-h-0 overflow-hidden transition-[max-height] duration-300">
+                <div class="grid grid-cols-3 ms-5 gap-22 px-6 pt-4 pb-4 text-xl lg:ms-7">
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Attractions</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Landmarks</a></li>
+                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Nature &amp; Wildlife</a></li>
+                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Photo spots</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Culture &amp; Heritage</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="webpage6.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Heritage Districts</a></li>
+                            <li><a href="webpage7.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Religious Heritage Sites</a></li>
+                            <li><a href="webpage8.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Museums &amp; Cultural Streets</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Food &amp; Shopping</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Singapore's food culture</a></li>
+                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Shopping experience</a></li>
+                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Food &amp; Shopping tips</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="max-h-0 overflow-hidden bg-white transition-[max-height] duration-300 md:hidden">
+                <ul class="flex flex-col gap-3 px-6 py-5 text-lg font-semibold">
+                    <li>
+                        <button type="button" class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Attractions</button>
+                        <ul class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature &amp; Wildlife</a></li>
+                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Iconic Landmarks</a></li>
+                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Photo spots</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Culture &amp; Heritage</button>
+                        <ul class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="webpage6.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Heritage Districts</a></li>
+                            <li><a href="webpage7.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Religious Heritage Sites</a></li>
+                            <li><a href="webpage8.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Museums and Cultural Streets</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Food &amp; Shopping</button>
+                        <ul class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Singapore's food culture</a></li>
+                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Shopping experience</a></li>
+                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Food &amp; Shopping tips</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../index.html" class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Practical tips</a></li>
+                    <li><a href="../../index.html" class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1 bg-gray-50">
+        <section class="mx-auto max-w-4xl px-6 py-12 md:py-16">
+            <h1 class="text-3xl font-bold">Religious Heritage Sites</h1>
+            <p class="mt-3 max-w-3xl text-gray-600">Visit religious buildings that show Singapore's diverse communities, architecture, and shared history.</p>
+        </section>
+
+        <section class="mx-auto max-w-4xl px-6 pb-12">
+            <h2 class="text-2xl font-semibold">Featured Sites</h2>
+            <div class="mt-5 grid gap-4 sm:grid-cols-2">
+                <article class="rounded-lg border bg-white p-5">
+                    <h3 class="text-lg font-semibold">Sri Mariamman Temple</h3>
+                    <p class="mt-2 text-sm text-gray-600">A Hindu temple in Chinatown with detailed tower designs.</p>
+                </article>
+                <article class="rounded-lg border bg-white p-5">
+                    <h3 class="text-lg font-semibold">Sultan Mosque</h3>
+                    <p class="mt-2 text-sm text-gray-600">A key landmark in Kampong Gelam with a golden dome.</p>
+                </article>
+                <article class="rounded-lg border bg-white p-5">
+                    <h3 class="text-lg font-semibold">Thian Hock Keng Temple</h3>
+                    <p class="mt-2 text-sm text-gray-600">A historic Chinese temple near Telok Ayer.</p>
+                </article>
+                <article class="rounded-lg border bg-white p-5">
+                    <h3 class="text-lg font-semibold">St Andrew's Cathedral</h3>
+                    <p class="mt-2 text-sm text-gray-600">A cathedral connected to Singapore's colonial history.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-4xl px-6 pb-14">
+            <div class="rounded-lg bg-white p-6 shadow-sm">
+                <h2 class="text-2xl font-semibold">Visitor Tip</h2>
+                <p class="mt-2 text-gray-600">Be respectful, follow visitor rules, and observe the architecture quietly.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="flex justify-between border-b border-t p-10">
+        <p>Singapore Tourism</p>
+        <p>&copy; Singapore</p>
+    </footer>
+
+</body>
+</html>
