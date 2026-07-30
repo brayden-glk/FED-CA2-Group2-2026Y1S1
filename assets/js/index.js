@@ -43,18 +43,18 @@ if (typewriter) {
 }
 
 
-
-
 // Interactive Map (Home Page)
 const places = {
     "changi-airport": {
         title: "Changi Airport",
-        description: "One of the world's best airports, knwon for it's iconic waterfall"
+        description: "One of the world's best airports, known for it's iconic waterfall",
+        link: "pages/attractions/attraction1.html"
     },
 
     "marina-bay-sands": {
         title: "Marina Bay Sands",
-        description: "Iconic hotel"
+        description: "Explore this iconic integrated resort in Singapore, renowned for its distinctive three-tower design topped by the SkyPark, luxury hotel, shopping, dining, entertainment, and infinity pool.",
+        link: "pages/attractions/attraction1.html"
     },
 
     "chinatown": {
@@ -75,43 +75,18 @@ const places = {
         title: "Orchard Road",
         description: "Shop along Singapore's famous retail boulevard, home to luxury boutiques, shopping malls, trendy cafes, and diverse dining experiences."
     }
-}
+};
 
-const infoBox = document.getElementById("infoBox")
-const title = document.getElementById("title")
-const description = document.getElementById("description")
-const closeInfo = document.getElementById("closeInfo")
-let infoBoxTimer;
+
 
 document.querySelectorAll(".hotspot").forEach(hotspot => {
-    function showPlace() {
-        window.clearTimeout(infoBoxTimer)
-        const place = hotspot.dataset.place
-        title.textContent = places[place].title
-        description.textContent = places[place].description
+    hotspot.addEventListener("click", function(event){
+    const place = event.target.id
 
-        infoBox.classList.remove("hidden")
-        requestAnimationFrame(() => infoBox.classList.remove("scale-95", "opacity-0"))
-    }
+    document.querySelector("#title").textContent = places[place].title
+    document.querySelector("#description").textContent = places[place].description
 
-    hotspot.addEventListener("click", showPlace)
-    hotspot.addEventListener("keydown", event => {
-        if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault()
-            showPlace()
-        }
+    document.querySelector("#popup").classList.remove("hidden")
+    document.querySelector("#dark-overlay").classList.remove("opacity-0", "pointer-events-none")
     })
-})
-
-function hideInfoBox() {
-    infoBox.classList.add("scale-95", "opacity-0")
-    infoBoxTimer = window.setTimeout(() => infoBox.classList.add("hidden"), 300)
-}
-
-if (closeInfo) {
-    closeInfo.addEventListener("click", hideInfoBox)
-}
-
-document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && infoBox && !infoBox.classList.contains("hidden")) hideInfoBox()
 })

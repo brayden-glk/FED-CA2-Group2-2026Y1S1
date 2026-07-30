@@ -1,47 +1,67 @@
 (() => {
-    const menuButton = document.getElementById("menu-button")
-    const mobileMenu = document.getElementById("mobile-menu")
-    const mobileDropdownButtons = document.querySelectorAll(".mobile-dropdown-buttons")
-    const mobileDropdownMenus = document.querySelectorAll(".mobile-dropdown-menus")
-    const exploreItem = document.getElementById("explore-item")
-    const exploreTrigger = document.getElementById("explore-trigger")
-    const desktopDropdown = document.getElementById("desktop-dropdown")
 
-    if (menuButton && mobileMenu) {
-        menuButton.addEventListener("click", () => {
-            mobileMenu.classList.toggle("max-h-0")
-            mobileMenu.classList.toggle("max-h-screen")
-            menuButton.setAttribute("aria-expanded", String(!mobileMenu.classList.contains("max-h-0")))
-        })
-    }
+// Mobile Navigations
+const menuButton = document.getElementById("menu-button")
+const mobileMenu = document.getElementById("mobile-menu")
+const mobileDropdownButtons = document.querySelectorAll(".mobile-dropdown-buttons")
+const mobileDropdownMenus = document.querySelectorAll(".mobile-dropdown-menus")
+const mobileNavigationChevron = document.querySelectorAll(".mobile-navigation-chevron")
 
-    mobileDropdownButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const currentMenu = button.nextElementSibling
-            if (!currentMenu) return
-            const isOpen = currentMenu.style.maxHeight !== "0px" && currentMenu.style.maxHeight !== ""
-            mobileDropdownMenus.forEach(menu => { menu.style.maxHeight = "0px" })
-            if (!isOpen) currentMenu.style.maxHeight = `${currentMenu.scrollHeight}px`
+menuButton.addEventListener("click", ()  => {
+    mobileMenu.classList.toggle("max-h-0")   
+    mobileMenu.classList.toggle("max-h-screen")   
+    const isOpen = !mobileMenu.classList.contains("max-h-0")
+    menuButton.setAttribute("aria-expanded", isOpen)
+})
+
+mobileDropdownButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const currentMenu = button.nextElementSibling
+        const currentChevron = button.querySelector(".mobile-navigation-chevron");
+        const isOpen = currentMenu.style.maxHeight !== "0px" && currentMenu.style.maxHeight !== ""
+        
+        mobileDropdownMenus.forEach(menu => {
+            menu.style.maxHeight = "0px"
         })
+
+        mobileNavigationChevron.forEach(chevron => {
+            chevron.classList.remove("rotate-180")
+        })
+        
+
+        if (!isOpen) {
+            currentMenu.style.maxHeight = `${currentMenu.scrollHeight}px`
+            currentChevron.classList.add("rotate-180")
+        }
     })
+})
 
-    if (exploreItem && exploreTrigger && desktopDropdown) {
-        const openDropdown = () => {
-            exploreTrigger.setAttribute("aria-expanded", "true")
-            exploreTrigger.classList.replace("border-transparent", "border-red-500")
-            desktopDropdown.classList.replace("max-h-0", "max-h-40")
-        }
-        const closeDropdown = () => {
-            exploreTrigger.setAttribute("aria-expanded", "false")
-            exploreTrigger.classList.replace("border-red-500", "border-transparent")
-            desktopDropdown.classList.replace("max-h-40", "max-h-0")
-        }
-        exploreItem.addEventListener("mouseenter", openDropdown)
-        exploreItem.addEventListener("mouseleave", closeDropdown)
-        desktopDropdown.addEventListener("mouseenter", openDropdown)
-        desktopDropdown.addEventListener("mouseleave", closeDropdown)
-    }
 
+//Desktop Navigations
+const exploreItem = document.getElementById("explore-item")
+const exploreTrigger = document.getElementById("explore-trigger")
+const desktopDropdown = document.getElementById("desktop-dropdown")
+
+function openDropdown(){
+    exploreTrigger.setAttribute("aria-expanded", "true")
+    exploreTrigger.classList.replace("border-transparent", "border-red-500")
+    desktopDropdown.classList.remove("max-h-0")
+    desktopDropdown.classList.add("max-h-40")
+}
+
+function closeDropdown(){
+    exploreTrigger.setAttribute("aria-expanded", "false")
+    exploreTrigger.classList.replace("border-red-500", "border-transparent")
+    desktopDropdown.classList.remove("max-h-40")
+    desktopDropdown.classList.add("max-h-0")
+}
+
+exploreItem.addEventListener("mouseenter", openDropdown)
+exploreItem.addEventListener("mouseleave", closeDropdown)
+desktopDropdown.addEventListener("mouseenter", openDropdown)
+desktopDropdown.addEventListener("mouseleave", closeDropdown)
+
+    // Script for setting correct href to the correct webpage for the Navigation Bar
     const routes = {
         "Landmarks": "pages/attractions/attraction1.html",
         "Iconic Landmarks": "pages/attractions/attraction1.html",
