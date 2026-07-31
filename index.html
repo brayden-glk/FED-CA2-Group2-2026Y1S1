@@ -103,7 +103,7 @@
                         <button type="button"
                             class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
                             <span class="transition duration-75 hover:text-red-500 hover:scale-105">Attractions</span>
-                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                            <img src="assets/images/chevron-down-black.png" alt="chevron"
                                 class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
                         </button>
                         <ul
@@ -111,7 +111,7 @@
                             <li><a href="../pages/attractions/attraction1.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Iconic
                                     Landmarks</a></li>
-                            <li><a href="../pages/attractions/attraction2.html"
+                            <li><a href="pages/attractions/attraction2.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature
                                     & Wildlife</a></li>
                             <li><a href="../pages/attractions/photo-spots.html"
@@ -124,7 +124,7 @@
                             class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
                             <span class="transition duration-75 hover:text-red-500 hover:scale-105">Culture &
                                 Heritage</span>
-                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                            <img src="assets/images/chevron-down-black.png" alt="chevron"
                                 class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
                         </button>
                         <ul
@@ -145,7 +145,7 @@
                             class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
                             <span class="transition duration-75 hover:text-red-500 hover:scale-105">Food &
                                 Shopping</span>
-                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                            <img src="assets/images/chevron-down-black.png" alt="chevron"
                                 class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
                         </button>
                         <ul
@@ -176,17 +176,19 @@
 
     <main class="flex-1">
         <section class="relative h-[62vh] min-h-380px overflow-hidden md:h-[70vh]">
-            <img src="assets/images/banner.jpeg" class="absolute inset-0 h-full w-full object-cover">
+            <img src="assets/images/bridgebanner.jpeg" class="absolute inset-0 h-full w-full object-cover">
 
             <div class="absolute inset-0 bg-linear-to-r from-black/75 via-black/45 to-transparent"></div>
 
 
             <div class="absolute inset-0 flex items-center px-6 md:px-16">
                 <div id="typewriter"
-                    class="relative max-w-xl text-4xl font-semibold leading-tight text-white drop-shadow-sm md:text-6xl">
+                    class="relative max-w-xl text-3xl font-semibold
+                     leading-tight text-white md:text-6xl">
                 </div>
 
-                <div id="cursor" class="ml-2 h-10 border-l-2 border-white/90 md:h-14"></div>
+                <div id="cursor" class="ml-2 h-10 border-l-8
+                 border-white/90 md:h-14 transition-opacity duration-100"></div>
             </div>
         </section>
 
@@ -194,7 +196,7 @@
             <!--Image of Singapore-->
             <div class="relative max-w-5xl mx-auto box-border shrink-0"> <!--shrink-0 disallows the map from shrinking-->
                 <img src="assets/images/Sg_map.png" alt="Map of Singapore"
-                    class="block h-auto w-full rounded-xl border border-gray-200 shadow-lg shadow-gray-200/70">
+                    class="block h-auto w-full rounded-xl border border-gray-200">
 
                 <svg class="absolute inset-0 w-full h-full" viewBox="0 0 810 510" preserveAspectRatio="none">
 
@@ -224,16 +226,18 @@
                 </svg>
 
                 <div id="popup"
-                class="absolute inset-0 w-4/5 h-4/5 max-w-6xl mx-auto box-border p-20
-                lg:flex-col flex justify-center items-center bg-white transition-all rounded-3xl hidden z-50">
-                    <div id="title" class="font-semibold"></div>
-                    <div id="description" class=""></div>
+                class="absolute inset-0 w-[90%] max-w-lg max-h-[80vh] mx-auto box-border p-10 md:p-20 gap-4
+                flex flex-col justify-center items-center bg-white transition-all duration-500 scale-80
+                 rounded-3xl opacity-0 pointer-events-none z-50">
+
+                    <div id="title" class="font-semibold text-lg md:text-4xl"></div>
+                    <div id="description" class="flex-1 mt-4 text-sm md:text-lg overflow-y-auto"></div>
 
                     <a id="link" class="hover:text-red-500 cursor-pointer"
-                    href="pages/attractions/attraction1.html">
-                        Click to find out more</div>
+                    href="">
+                        Learn more →
                     </a>
-            </div>
+                </div>
         </section>
         
         <div id="dark-overlay"

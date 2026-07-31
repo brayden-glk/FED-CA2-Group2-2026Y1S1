@@ -6,18 +6,33 @@ let isDeleting = false
 let countLetter = 0
 let textNumber = 0
 let texts = ["Adventure Awaits", "Discover Singapore", "Explore New Places"]
+
 const typewriter = document.querySelector("#typewriter")
+const cursor = document.querySelector("#cursor")
+
+let blink = setInterval(() => {
+    cursor.classList.toggle("opacity-0");
+}, 500);
 
 function typewrite(){
     if (textNumber == texts.length){
       textNumber = 0;  
     };
+
     if (!isDeleting){
         if (countLetter > texts[textNumber].length){
             isDeleting = true
+
+            blink = setInterval(() => {
+                cursor.classList.toggle("opacity-0");
+            }, 500);
+
             return setTimeout(typewrite, pauseTime)
         }
         else {
+            clearInterval(blink);
+            cursor.classList.remove("opacity-0")
+
             typewriter.textContent = texts[textNumber].slice(0, countLetter)
             countLetter++
             return setTimeout(typewrite, typingSpeed)
@@ -28,9 +43,17 @@ function typewrite(){
             textNumber++
             countLetter = 0
             isDeleting = false
+
+             blink = setInterval(() => {
+                cursor.classList.toggle("opacity-0");
+            }, 500);
+
             return setTimeout(typewrite, pauseTime)
         }
         else {
+            clearInterval(blink);
+            cursor.classList.remove("opacity-0")
+
             typewriter.textContent = texts[textNumber].slice(0, countLetter)
             countLetter--
             return setTimeout(typewrite, deletingSpeed)
@@ -53,40 +76,52 @@ const places = {
 
     "marina-bay-sands": {
         title: "Marina Bay Sands",
-        description: "Explore this iconic integrated resort in Singapore, renowned for its distinctive three-tower design topped by the SkyPark, luxury hotel, shopping, dining, entertainment, and infinity pool.",
+        description: "Renowned for its distinctive three-tower design topped by the SkyPark and more",
         link: "pages/attractions/attraction1.html"
     },
 
     "chinatown": {
         title: "Chinatown",
-        description: "Explore Singapore's rich Chinese heritage through historic temples, colorful shophouses, traditional markets, and authentic local cuisine."
+        description: "Singapore's rich Chinese heritage via historic temples and colorful shophouses",
+        link: "pages/culture-heritage/webpage6.html"
     },
 
     "gardens-by-the-bay": {
         title: "Gardens by the Bay",
-        description: "Discover Singapore's iconic nature park featuring the Supertree Grove, stunning waterfront gardens, and impressive conservatories filled with plants from around the world."
+        description: "Singapore's iconic nature park featuring the Supertree Grove and stunning waterfront gardens",
+        link: "pages/attractions/attraction1.html"
     },
     "sentosa": {
         title: "Sentosa",
-        description: "Relax on sandy beaches, enjoy thrilling attractions, and visit world-class entertainment destinations on Singapore's premier island resort."
+        description: "Sandy beaches, thrilling attractions, and world-class entertainment destinations",
+        link: "pages/attractions/attraction1.html"
     },
 
     "orchard": {
         title: "Orchard Road",
-        description: "Shop along Singapore's famous retail boulevard, home to luxury boutiques, shopping malls, trendy cafes, and diverse dining experiences."
+        description: "Singapore's famous retail boulevard, home to luxury boutiques, shopping malls, and diverse dining experiences.",
+        link: "pages/food-shopping/fs1.html"
     }
 };
 
 
-
+// Map hotspots and Popup
 document.querySelectorAll(".hotspot").forEach(hotspot => {
     hotspot.addEventListener("click", function(event){
     const place = event.target.id
 
     document.querySelector("#title").textContent = places[place].title
     document.querySelector("#description").textContent = places[place].description
+    document.querySelector("#link").setAttribute("href", places[place].link)
 
-    document.querySelector("#popup").classList.remove("hidden")
+    document.querySelector("#popup").classList.remove("opacity-0", "scale-90", "pointer-events-none")
+    document.querySelector("#popup").classList.add("scale-100")
     document.querySelector("#dark-overlay").classList.remove("opacity-0", "pointer-events-none")
     })
+})
+
+document.querySelector("#dark-overlay").addEventListener("click", function(){
+    document.querySelector("#popup").classList.add("opacity-0", "scale-90", "pointer-events-none")
+    document.querySelector("#popup").classList.remove("scale-100")
+    document.querySelector("#dark-overlay").classList.add("opacity-0", "pointer-events-none")
 })

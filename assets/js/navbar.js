@@ -77,6 +77,7 @@ desktopDropdown.addEventListener("mouseleave", closeDropdown)
         "Practical tips": "pages/practical-tips.html",
         "Contact us": "pages/contact-us.html"
     }
+    
     const navigationScript = document.currentScript
     if (navigationScript?.src) {
         const projectRoot = new URL("../../", navigationScript.src)
