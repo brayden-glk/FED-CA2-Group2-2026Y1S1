@@ -13,94 +13,160 @@
 
 <body class="flex min-h-screen flex-col bg-white text-gray-900 font-['Inter']">
 
-    <header class="h-20">
+    <header class="h-16 md:h-20">
         <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
-            <div class="flex h-20 items-center justify-between px-6 md:px-4">
+            <div class="flex h-16 md:h-20 items-center justify-between px-6 md:px-4">
                 <div class="md:ms-5">
                     <a href="../../index.html" aria-label="Singapore Tourism home" class="flex flex-row gap-1.5 md:gap-3">
-                        <img src="../../assets/images/sg.png" alt="Singapore Tourism" class="h-9 w-9 object-cover md:h-12 md:w-12">
-                        <span class="m-0 pt-0.5 text-xs font-semibold md:mt-3 md:p-0 md:text-base">Singapore <br class="md:hidden">Tourism</span>
+                        <img src="../../assets/images/sg.png" alt="Singapore Tourism"
+                            class="h-9 w-9 object-cover md:h-12 md:w-12">
+                        <span class="m-0 pt-0.5 text-xs font-semibold md:mt-3 md:p-0 md:text-base">Singapore <br
+                                class="md:hidden">Tourism</span>
                     </a>
                 </div>
-
+    
                 <ul class="hidden h-full items-center me-5 text-xl font-semibold md:flex md:gap-10 lg:gap-14">
                     <li id="explore-item" class="flex h-full items-center">
-                        <button id="explore-trigger" type="button" aria-haspopup="true" aria-expanded="false" class="border-b-2 border-transparent">
-                            Explore
-                        </button>
+                        <button id="explore-trigger" type="button" aria-haspopup="true" aria-expanded="false"
+                            class="border-b-2 border-transparent">Explore</button>
                     </li>
-                    <li class="flex h-full items-center">
-                        <a href="../../index.html" class="border-b-2 border-transparent hover:border-red-500">Practical tips</a>
+                    <li class="h-full flex items-center">
+                        <a href="../../pages/practical-tips.html"
+                            class="border-b-2 border-transparent hover:border-red-500">Practical tips</a>
                     </li>
-                    <li class="flex h-full items-center">
-                        <a href="../../index.html" class="border-b-2 border-transparent hover:border-red-500">Contact us</a>
+                    <li class="h-full flex items-center">
+                        <a href="../../pages/contact-us.html"
+                            class="border-b-2 border-transparent hover:border-red-500">Contact
+                            us</a>
                     </li>
                 </ul>
-
+    
                 <button id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden">
                     <img src="../../assets/images/menu.svg" alt="Menu" class="h-6 w-6">
                 </button>
             </div>
-
+    
             <div id="desktop-dropdown" class="max-h-0 overflow-hidden transition-[max-height] duration-300">
                 <div class="grid grid-cols-3 ms-5 gap-22 px-6 pt-4 pb-4 text-xl lg:ms-7">
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Attractions</h2>
                         <ul class="mt-1 leading-7">
-                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Landmarks</a></li>
-                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Nature &amp; Wildlife</a></li>
-                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Photo spots</a></li>
+                            <li><a href="../../pages/attractions/iconic-landmarks.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Iconic
+                                    Landmarks</a>
+                            </li>
+                            <li><a href="../../pages/attractions/nature-areas.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Nature
+                                    &amp; Wildlife</a></li>
+                            <li><a href="../../pages/attractions/photo-spots.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Photo
+                                    spots</a></li>
                         </ul>
                     </section>
-
+    
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Culture &amp; Heritage</h2>
                         <ul class="mt-1 leading-7">
-                            <li><a href="webpage6.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Heritage Districts</a></li>
-                            <li><a href="webpage7.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Religious Heritage Sites</a></li>
-                            <li><a href="webpage8.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Museums &amp; Cultural Streets</a></li>
+                            <li><a href="../../pages/culture-heritage/heritage-districts.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Heritage
+                                    Districts</a></li>
+                            <li><a href="../../pages/culture-heritage/heritage-sites.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Religious
+                                    Heritage Sites</a></li>
+                            <li><a href="../../pages/culture-heritage/museum-cultural-streets.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Museums
+                                    &amp; Cultural Streets</a></li>
                         </ul>
                     </section>
-
+    
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Food &amp; Shopping</h2>
                         <ul class="mt-1 leading-7">
-                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Singapore's food culture</a></li>
-                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Shopping experience</a></li>
-                            <li><a href="../../index.html" class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Food &amp; Shopping tips</a></li>
+                            <li><a href="../../pages/food-shopping/local-dishes.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Singapore's
+                                    food culture</a></li>
+                            <li><a href="../../pages/food-shopping/shopping-areas.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Shopping
+                                    experience</a></li>
+                            <li><a href="../../pages/food-shopping/shopping-tips.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Food
+                                    &amp; Shopping tips</a></li>
                         </ul>
                     </section>
                 </div>
             </div>
-
+    
             <div id="mobile-menu" class="max-h-0 overflow-hidden bg-white transition-[max-height] duration-300 md:hidden">
                 <ul class="flex flex-col gap-3 px-6 py-5 text-lg font-semibold">
                     <li>
-                        <button type="button" class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Attractions</button>
-                        <ul class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
-                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature &amp; Wildlife</a></li>
-                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Iconic Landmarks</a></li>
-                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Photo spots</a></li>
+                        <button type="button"
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Attractions</span>
+                            <img src="../../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
+                        <ul
+                            class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="../../pages/attractions/iconic-landmarks.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Iconic
+                                    Landmarks</a></li>
+                            <li><a href="../../pages/attractions/nature-areas.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature
+                                    & Wildlife</a></li>
+                            <li><a href="../../pages/attractions/photo-spots.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Photo
+                                    spots</a></li>
                         </ul>
                     </li>
                     <li>
-                        <button type="button" class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Culture &amp; Heritage</button>
-                        <ul class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
-                            <li><a href="webpage6.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Heritage Districts</a></li>
-                            <li><a href="webpage7.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Religious Heritage Sites</a></li>
-                            <li><a href="webpage8.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Museums and Cultural Streets</a></li>
+                        <button type="button"
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Culture &
+                                Heritage</span>
+                            <img src="../../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
+                        <ul
+                            class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="../../pages/culture-heritage/heritage-districts.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Heritage
+                                    Districts</a></li>
+                            <li><a href="../../pages/culture-heritage/heritage-sites.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Religious
+                                    Heritage Sites</a></li>
+                            <li><a href="../../pages/culture-heritage/museum-cultural-streets.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Museums
+                                    & Cultural Streets</a></li>
                         </ul>
                     </li>
                     <li>
-                        <button type="button" class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Food &amp; Shopping</button>
-                        <ul class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
-                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Singapore's food culture</a></li>
-                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Shopping experience</a></li>
-                            <li><a href="../../index.html" class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Food &amp; Shopping tips</a></li>
+                        <button type="button"
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Food &
+                                Shopping</span>
+                            <img src="../../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
+                        <ul
+                            class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="../../pages/food-shopping/local-dishes.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Singapore's
+                                    food culture</a></li>
+                            <li><a href="../../pages/food-shopping/shopping-areas.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Shopping
+                                    experience</a></li>
+                            <li><a href="../../pages/food-shopping/shopping-tips.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Food
+                                    & Shopping tips</a></li>
                         </ul>
                     </li>
-                    <li><a href="../../index.html" class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Practical tips</a></li>
-                    <li><a href="../../index.html" class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Contact us</a></li>
+                    <li><a href="../../pages/practical-tips.html"
+                            class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Practical
+                            tips</a></li>
+                    <li><a href="../../pages/contact-us.html"
+                            class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Contact
+                            us</a></li>
+    
                 </ul>
             </div>
         </nav>
@@ -185,9 +251,12 @@
         </section>
     </main>
 
-    <footer class="flex justify-between border-t p-10 bg-gray-800 text-white">
-        <p>Singapore Tourism</p>
-        <p>&copy; Singapore</p>
+    <footer class="bg-gray-800 w-full">
+        <div
+            class="flex flex-col items-center gap-1 p-3 text-xs text-white md:flex-row md:justify-between md:gap-0 md:p-5 md:text-sm lg:p-6 lg:text-base">
+            <p>Singapore Tourism</p>
+            <p>&copy; 2026. All rights reserved</p>
+        </div>
     </footer>
 
 </body>

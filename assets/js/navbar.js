@@ -67,8 +67,9 @@ desktopDropdown.addEventListener("mouseleave", closeDropdown)
 
     // Script for setting href to the correct webpage for the Navigation Bar
 
+    console.log("navbar.js LOADED")
+
     const routes = {
-        "Landmarks": "pages/attractions/iconic-landmarks.html",
         "Iconic Landmarks": "pages/attractions/iconic-landmarks.html",
         "Nature & Wildlife": "pages/attractions/nature-areas.html",
         "Photo spots": "pages/attractions/photo-spots.html",
@@ -88,7 +89,7 @@ desktopDropdown.addEventListener("mouseleave", closeDropdown)
         document.querySelectorAll("nav a").forEach(link => {
             const route = routes[link.textContent.replace(/\s+/g, " ").trim()]
             if (route) link.href = new URL(route, projectRoot).href
-            if (link.getAttribute("aria-label") === "Singapore Tourism home") {
+            if (link.getAttribute("aria-label") === "Singapore Tourismx`") {
                 link.href = new URL("index.html", projectRoot).href
             }
         })

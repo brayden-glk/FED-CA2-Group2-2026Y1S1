@@ -1,52 +1,115 @@
-const menuButton = document.getElementById("menu-button")
-const mobileMenu = document.getElementById("mobile-menu")
-const mobileDropdownButtons = document.querySelectorAll(".mobile-dropdown-buttons")
-const mobileDropdownMenus = document.querySelectorAll(".mobile-dropdown-menus")
-const exploreItem = document.getElementById("explore-item")
-const exploreTrigger = document.getElementById("explore-trigger")
-const desktopDropdown = document.getElementById("desktop-dropdown")
+//Image carousel
 
+const slides = [
+    {
+        image: "../../assets/images/practical-tips-banner.jpg",
+        title: "Fort Canning Tree Tunnel",
+        target: "spot1"
+    },
+    {
+        image: "../../assets/images/heritage.jpeg",
+        title: "Spot 2",
+        target: "spot2"
+    },
+    {
+        image: "../../assets/images/banner.jpeg",
+        title: "Spot 3",
+        target: "spot3"
+    },
+    {
+        image: "../../assets/images/heritage.webp",
+        title: "Spot 4",
+        target: "spot4"
+    }
+]
 
-// Mobile Navigations
-menuButton.addEventListener("click", ()  => {
-    mobileMenu.classList.toggle("max-h-0")   
-    mobileMenu.classList.toggle("max-h-screen")   
-    const isOpen = !mobileMenu.classList.contains("max-h-0")
-    menuButton.setAttribute("aria-expanded", isOpen)
-})
+let currentSlide = 0
 
-mobileDropdownButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const currentMenu = button.nextElementSibling
-        const isOpen = currentMenu.style.maxHeight !== "0px" && currentMenu.style.maxHeight !== ""
-        
-        mobileDropdownMenus.forEach(menu => {
-            menu.style.maxHeight = "0px"
-        })
+const carouselContainer = document.getElementById("carousel-container")
+const carouselImage = document.getElementById("carousel-image")
+const carouselTitle = document.querySelectorAll(".carousel-title")
+const nextButton = document.getElementById("next-button")
+const prevButton = document.getElementById("prev-button")
 
-        if (!isOpen) {
-            currentMenu.style.maxHeight = `${currentMenu.scrollHeight}px`
+function updateIndicator(){
+    const indicators = document.querySelectorAll(".indicator")
+
+    indicators.forEach((indicator, index) =>{
+        if (index == currentSlide){
+            indicator.classList.remove("bg-gray-300")
+            indicator.classList.add("bg-red-500")
+        }
+        else {
+            indicator.classList.remove("bg-red-500")
+            indicator.classList.add("bg-gray-300")            
         }
     })
+}
+
+function updateCarousel(){
+    carouselImage.classList.add("opacity-0")
+
+    setTimeout(() => {
+        carouselImage.src = slides[currentSlide].image
+        carouselTitle.forEach(title => {
+            title.textContent = slides[currentSlide].title
+        })
+        updateIndicator()
+        carouselImage.classList.remove("opacity-0")
+    }, 75)
+}
+
+function prevSlide(){
+    currentSlide--
+
+    if (currentSlide < 0)
+        currentSlide = slides.length - 1
+
+    updateCarousel()
+}
+
+function nextSlide(){
+    currentSlide++
+
+    if (currentSlide >= slides.length)
+        currentSlide = 0
+
+    updateCarousel()
+}
+
+let autoSlide = setInterval(nextSlide, 3000)
+let isHovered = false
+
+function startAutoslide(){
+    clearInterval(autoSlide)
+    if(!isHovered)
+        autoSlide = setInterval(nextSlide, 3000)
+}
+
+nextButton.addEventListener("click", (event) => {
+    event.stopPropagation()
+    nextSlide()
+    startAutoslide()
 })
 
+prevButton.addEventListener("click", (event) => {
+    event.stopPropagation()
+    prevSlide()
+    startAutoslide()
+})
 
-//Desktop Navigations
-function openDropdown(){
-    exploreTrigger.setAttribute("aria-expanded", "true")
-    exploreTrigger.classList.replace("border-transparent", "border-red-500")
-    desktopDropdown.classList.remove("max-h-0")
-    desktopDropdown.classList.add("max-h-40")
-}
+carouselContainer.addEventListener("mouseenter", () => {
+    isHovered = true
+    clearInterval(autoSlide)
+})
 
-function closeDropdown(){
-    exploreTrigger.setAttribute("aria-expanded", "false")
-    exploreTrigger.classList.replace("border-red-500", "border-transparent")
-    desktopDropdown.classList.remove("max-h-40")
-    desktopDropdown.classList.add("max-h-0")
-}
+carouselContainer.addEventListener("mouseleave", () => {
+    isHovered = false
+    startAutoslide()
+})
 
-exploreItem.addEventListener("mouseenter", openDropdown)
-exploreItem.addEventListener("mouseleave", closeDropdown)
-desktopDropdown.addEventListener("mouseenter", openDropdown)
-desktopDropdown.addEventListener("mouseleave", closeDropdown)
+carouselContainer.addEventListener("click", () => {
+    document
+        .getElementById(slides[currentSlide].target)
+        .scrollIntoView({behavior: "smooth"})
+})
