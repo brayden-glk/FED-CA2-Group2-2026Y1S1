@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <title>Navigation</title>
 </head>
 
@@ -173,7 +175,6 @@
         </nav>
     </header>
 
-
     <main class="flex-1">
         <section class="relative h-[42vh] min-h-380px overflow-hidden md:h-[55vh] lg:h-[70vh]">
             <img src="assets/images/bridgebanner.jpeg" class="absolute inset-0 h-full w-full object-cover">
@@ -234,7 +235,8 @@
 
                     <div class="w-full overflow-y-auto flex-col flex md:gap-10 gap-5">
                         <img id="img-popup" class="object-cover w-full max-h-50 md:max-h-100">
-                        <div id="description" class="flex-1 mt-4 text-sm md:text-lg"></div>
+                        <div id="description" class="flex-1 mt-4 text-sm md:text-lg">
+                        </div>
 
                         <div class=" justify-end text-sm self-end">
                             <a id="link" class="hover:text-red-500 cursor-pointer">
@@ -251,9 +253,9 @@
         <!--'pointer-events-none' prevents the invisible overlay from blocking clicks-->
         </div>
 
-        <section class="mx-auto mb-14 mt-16 flex w-full max-w-6xl flex-col gap-6 px-5 md:mt-20 md:flex-row md:px-10">
+        <!-- <section class="mx-auto mb-14 mt-16 flex w-full max-w-6xl flex-col gap-6 px-5 md:mt-20 md:flex-row md:px-10">
 
-            <!--What SG is famous for and why tourists should come-->
+            What SG is famous for and why tourists should come
             <div class="flex flex-1 flex-col gap-4 rounded-2xl p-7 md:p-8">
                 <p class="text-2xl font-semibold tracking-tight">Singapore's History</p>
 
@@ -285,7 +287,9 @@
                     destination for every visitor.
                 </p>
             </div>
-        </section>
+        </section> -->
+
+
     </main>
 
     <footer class="bg-gray-800">
