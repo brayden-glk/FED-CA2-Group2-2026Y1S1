@@ -175,7 +175,7 @@
 
 
     <main class="flex-1">
-        <section class="relative h-[62vh] min-h-380px overflow-hidden md:h-[70vh]">
+        <section class="relative h-[42vh] min-h-380px overflow-hidden md:h-[55vh] lg:h-[70vh]">
             <img src="assets/images/bridgebanner.jpeg" class="absolute inset-0 h-full w-full object-cover">
 
             <div class="absolute inset-0 bg-linear-to-r from-black/75 via-black/45 to-transparent"></div>
@@ -192,7 +192,7 @@
             </div>
         </section>
 
-        <section class="mx-auto mt-16 flex w-full max-w-6xl flex-col items-center px-5 md:mt-20 md:px-10">
+        <section class="mx-auto mt-16 flex w-full max-w-6xl flex-col items-center px-2 md:mt-20 md:px-10">
             <!--Image of Singapore-->
             <div class="relative max-w-5xl mx-auto box-border shrink-0"> <!--shrink-0 disallows the map from shrinking-->
                 <img src="assets/images/Sg_map.png" alt="Map of Singapore"
@@ -201,42 +201,47 @@
                 <svg class="absolute inset-0 w-full h-full" viewBox="0 0 810 510" preserveAspectRatio="none">
 
                     <!--Changi Airport-->
-                    <circle id="changi-airport" cx="620" cy="220" r="7" fill="red" role="button"
+                    <circle id="changi-airport" cx="620" cy="220" r="10" fill="red" role="button"
                         class="cursor-pointer hotspot" />
 
-                    <!--Marina Bay Sands-->
-                    <circle id="marina-bay-sands" cx="440" cy="300" r="7" fill="red" role="button"
+                    <!--Marina Bay Sands--> 
+                    <circle id="marina-bay-sands" cx="440" cy="300" r="10" fill="red" role="button"
                         class="cursor-pointer hotspot" />
 
                     <!--Chinatown-->
-                    <circle id="chinatown" cx="390" cy="315" r="7" fill="red" role="button"
+                    <circle id="chinatown" cx="370" cy="255" r="10" fill="red" role="button"
                         class="cursor-pointer hotspot" />
 
                     <!--Sentosa-->
-                    <circle id="sentosa" cx="370" cy="375" r="7" fill="red" role="button"
+                    <circle id="sentosa" cx="370" cy="375" r="10" fill="red" role="button"
                         class="cursor-pointer hotspot" />
 
                     <!--Gardens by the Bay-->
-                    <circle id="gardens-by-the-bay" cx="420" cy="335" r="7" fill="red" role="button"
+                    <circle id="gardens-by-the-bay" cx="400" cy="315" r="10" fill="red" role="button"
                         class="cursor-pointer hotspot" />
 
                     <!--Orchard-->
-                    <circle id="orchard" cx="370" cy="290" r="7" fill="red" role="button"
+                    <circle id="orchard" cx="310" cy="290" r="10" fill="red" role="button"
                         class="cursor-pointer hotspot" />
                 </svg>
 
                 <div id="popup"
-                class="absolute inset-0 w-[90%] max-w-lg max-h-[80vh] mx-auto box-border p-10 md:p-20 gap-4
-                flex flex-col justify-center items-center bg-white transition-all duration-500 scale-80
-                 rounded-3xl opacity-0 pointer-events-none z-50">
+                class="absolute inset-0 w-[90%] max-w-lg h-[50vh] md:h-[75vh] mx-auto p-10 md:p-20 gap-4
+                flex flex-col items-center bg-white transition-all duration-500 scale-80
+                 rounded-2xl opacity-0 pointer-events-none z-50 overflow-hidden">
 
-                    <div id="title" class="font-semibold text-lg md:text-4xl"></div>
-                    <div id="description" class="flex-1 mt-4 text-sm md:text-lg overflow-y-auto"></div>
+                    <div id="title" class="font-semibold text-lg md:text-3xl"></div>
 
-                    <a id="link" class="hover:text-red-500 cursor-pointer"
-                    href="">
-                        Learn more →
-                    </a>
+                    <div class="w-full overflow-y-auto flex-col flex md:gap-10 gap-5">
+                        <img id="img-popup" class="object-cover w-full max-h-50 md:max-h-100">
+                        <div id="description" class="flex-1 mt-4 text-sm md:text-lg"></div>
+
+                        <div class=" justify-end text-sm self-end">
+                            <a id="link" class="hover:text-red-500 cursor-pointer">
+                                Learn more →
+                            </a>
+                        </div>
+                    </div>
                 </div>
         </section>
         

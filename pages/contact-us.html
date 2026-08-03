@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="../assets/js/contact-us.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
     <title>Practical Tips | Singapore Tourism</title>
 </head>
 
-<body class="flex min-h-screen flex-col bg-gray-50 font-['Inter']">
+<body class="flex min-h-screen flex-col bg-gray-50">
 
     <header class="h-16 md:h-20">
         <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
@@ -32,11 +29,13 @@
                             class="border-b-2 border-transparent">Explore</button>
                     </li>
                     <li class="h-full flex items-center">
-                        <a href="practical-tips.html" class="border-b-2 border-transparent hover:border-red-500">Practical
-                            tips</a>
+                        <a href="../pages/practical-tips.html"
+                            class="border-b-2 border-transparent hover:border-red-500">Practical tips</a>
                     </li>
                     <li class="h-full flex items-center">
-                        <a href="contact-us.html" class="border-b-2 border-transparent hover:border-red-500">Contact us</a>
+                        <a href="../pages/contact-us.html"
+                            class="border-b-2 border-transparent hover:border-red-500">Contact
+                            us</a>
                     </li>
                 </ul>
     
@@ -50,13 +49,13 @@
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Attractions</h2>
                         <ul class="mt-1 leading-7">
-                            <li><a href="#"
+                            <li><a href="../pages/attractions/attraction1.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Landmarks</a>
                             </li>
-                            <li><a href="#"
+                            <li><a href="../pages/attractions/attraction2.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Nature
                                     &amp; Wildlife</a></li>
-                            <li><a href="attractions/photo-spots.html"
+                            <li><a href="../pages/attractions/photo-spots.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Photo
                                     spots</a></li>
                         </ul>
@@ -65,13 +64,13 @@
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Culture &amp; Heritage</h2>
                         <ul class="mt-1 leading-7">
-                            <li><a href="#"
+                            <li><a href="../pages/culture-heritage/webpage6.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Heritage
                                     Districts</a></li>
-                            <li><a href="#"
+                            <li><a href="../pages/culture-heritage/webpage7.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Religious
                                     Heritage Sites</a></li>
-                            <li><a href="#"
+                            <li><a href="../pages/culture-heritage/webpage8.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Museums
                                     &amp; Cultural Streets</a></li>
                         </ul>
@@ -80,13 +79,13 @@
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Food &amp; Shopping</h2>
                         <ul class="mt-1 leading-7">
-                            <li><a href="#"
+                            <li><a href="../pages/food-shopping/fs1.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Singapore's
                                     food culture</a></li>
-                            <li><a href="#"
+                            <li><a href="../pages/food-shopping/fs2.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Shopping
                                     experience</a></li>
-                            <li><a href="#"
+                            <li><a href="../pages/food-shopping/fs3.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Food
                                     &amp; Shopping tips</a></li>
                         </ul>
@@ -98,59 +97,70 @@
                 <ul class="flex flex-col gap-3 px-6 py-5 text-lg font-semibold">
                     <li>
                         <button type="button"
-                            class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Attractions
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Attractions</span>
+                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
                         </button>
                         <ul
                             class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
-                            <li><a href="#"
-                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature
-                                    &amp; Wildlife</a></li>
-                            <li><a href="#"
+                            <li><a href="../pages/attractions/attraction1.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Iconic
                                     Landmarks</a></li>
-                            <li><a href="attractions/photo-spots.html"
+                            <li><a href="../pages/attractions/attraction2.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature
+                                    & Wildlife</a></li>
+                            <li><a href="../pages/attractions/photo-spots.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Photo
                                     spots</a></li>
                         </ul>
                     </li>
                     <li>
                         <button type="button"
-                            class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Culture
-                            &amp; Heritage</button>
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Culture &
+                                Heritage</span>
+                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
                         <ul
                             class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
-                            <li><a href="#"
+                            <li><a href="../pages/culture-heritage/webpage6.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Heritage
                                     Districts</a></li>
-                            <li><a href="#"
+                            <li><a href="../pages/culture-heritage/webpage7.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Religious
                                     Heritage Sites</a></li>
-                            <li><a href="#"
+                            <li><a href="../pages/culture-heritage/webpage8.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Museums
-                                    and Cultural Streets</a></li>
+                                    & Cultural Streets</a></li>
                         </ul>
                     </li>
                     <li>
                         <button type="button"
-                            class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Food
-                            &amp; Shopping</button>
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Food &
+                                Shopping</span>
+                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
                         <ul
                             class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
-                            <li><a href="#"
+                            <li><a href="../pages/food-shopping/fs1.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Singapore's
                                     food culture</a></li>
-                            <li><a href="#"
+                            <li><a href="../food-shopping/fs2.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Shopping
                                     experience</a></li>
-                            <li><a href="#"
+                            <li><a href="../pages/food-shopping/fs3.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Food
-                                    &amp; Shopping tips</a></li>
+                                    & Shopping tips</a></li>
                         </ul>
                     </li>
-                    <li><a href="practical-tips.html"
+                    <li><a href="../pages/practical-tips.html"
                             class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Practical
                             tips</a></li>
-                    <li><a href="contact-us.html"
+                    <li><a href="../pages/contact-us.html"
                             class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Contact
                             us</a></li>
     

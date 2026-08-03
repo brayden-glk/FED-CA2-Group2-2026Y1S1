@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="../../assets/js/navbar.js"></script>
-    <title>Religious Heritage Sites</title>
+    <title>Museums and Cultural Streets</title>
 </head>
 
-<body class="flex min-h-screen flex-col bg-white text-gray-900">
+<body class="flex min-h-screen flex-col bg-white text-gray-900 font-['Inter']">
 
     <header class="h-20">
         <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
@@ -104,42 +107,85 @@
     </header>
 
     <main class="flex-1 bg-gray-50">
-        <section class="mx-auto max-w-4xl px-6 py-12 md:py-16">
-            <h1 class="text-3xl font-bold">Religious Heritage Sites</h1>
-            <p class="mt-3 max-w-3xl text-gray-600">Visit religious buildings that show Singapore's diverse communities, architecture, and shared history.</p>
-        </section>
-
-        <section class="mx-auto max-w-4xl px-6 pb-12">
-            <h2 class="text-2xl font-semibold">Featured Sites</h2>
-            <div class="mt-5 grid gap-4 sm:grid-cols-2">
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">Sri Mariamman Temple</h3>
-                    <p class="mt-2 text-sm text-gray-600">A Hindu temple in Chinatown with detailed tower designs.</p>
-                </article>
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">Sultan Mosque</h3>
-                    <p class="mt-2 text-sm text-gray-600">A key landmark in Kampong Gelam with a golden dome.</p>
-                </article>
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">Thian Hock Keng Temple</h3>
-                    <p class="mt-2 text-sm text-gray-600">A historic Chinese temple near Telok Ayer.</p>
-                </article>
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">St Andrew's Cathedral</h3>
-                    <p class="mt-2 text-sm text-gray-600">A cathedral connected to Singapore's colonial history.</p>
-                </article>
+        <section class="px-6 py-12 md:px-12 md:py-16 lg:px-20">
+            <div class="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-wide text-red-500">Culture &amp; Heritage</p>
+                    <h1 class="mt-2 text-3xl font-bold">Museums and Cultural Streets</h1>
+                    <p class="mt-3 max-w-3xl text-gray-600">Museums are useful when you want the background story. Cultural streets are better when you want to see how heritage still appears in real neighbourhoods.</p>
+                </div>
+                <div class="rounded-lg border bg-white p-5">
+                    <h2 class="font-semibold">Suggested Route</h2>
+                    <p class="mt-2 text-sm text-gray-600">Visit a museum first, then walk through a nearby cultural street to see how the history connects to everyday places.</p>
+                </div>
             </div>
         </section>
 
-        <section class="mx-auto max-w-4xl px-6 pb-14">
-            <div class="rounded-lg bg-white p-6 shadow-sm">
-                <h2 class="text-2xl font-semibold">Visitor Tip</h2>
-                <p class="mt-2 text-gray-600">Be respectful, follow visitor rules, and observe the architecture quietly.</p>
+        <section class="px-6 pb-12 md:px-12 lg:px-20">
+            <div class="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
+                <div class="rounded-lg bg-white p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold">Indoor Stops</h2>
+                    <div class="mt-5 space-y-4">
+                        <article class="border-b pb-4 last:border-b-0 last:pb-0">
+                            <h3 class="font-semibold">National Museum</h3>
+                            <p class="mt-1 text-sm text-gray-600">A good first stop for Singapore's history because the exhibits give a timeline before visiting other places.</p>
+                        </article>
+                        <article>
+                            <h3 class="font-semibold">Asian Civilisations Museum</h3>
+                            <p class="mt-1 text-sm text-gray-600">Useful for learning about trade, migration, and different Asian cultures connected to Singapore.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="rounded-lg border bg-white p-6">
+                    <h2 class="text-2xl font-semibold">Street Walks</h2>
+                    <p class="mt-2 text-gray-600">These places are not museum-like, but they show heritage through building colours, shop signs, food, and street activity.</p>
+                    <div class="mt-5 grid gap-4 sm:grid-cols-2">
+                        <article class="rounded-md bg-gray-50 p-4">
+                            <h3 class="font-semibold">Joo Chiat Road</h3>
+                            <p class="mt-1 text-sm text-gray-600">Known for colourful Peranakan shophouses, cafes, and food spots.</p>
+                        </article>
+                        <article class="rounded-md bg-gray-50 p-4">
+                            <h3 class="font-semibold">Emerald Hill</h3>
+                            <p class="mt-1 text-sm text-gray-600">A short preserved street near Orchard Road, so the contrast feels obvious.</p>
+                        </article>
+                        <article class="rounded-md bg-gray-50 p-4">
+                            <h3 class="font-semibold">Waterloo Street</h3>
+                            <p class="mt-1 text-sm text-gray-600">A compact area where religious sites, small shops, and foot traffic sit close together.</p>
+                        </article>
+                        <article class="rounded-md bg-gray-50 p-4">
+                            <h3 class="font-semibold">Telok Ayer</h3>
+                            <p class="mt-1 text-sm text-gray-600">Good for seeing temples and conserved streets near newer office buildings.</p>
+                        </article>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section class="bg-white px-6 py-10 md:px-12 lg:px-20">
+            <div class="grid gap-6 lg:grid-cols-[1fr_1fr_1fr]">
+                <div>
+                    <h2 class="text-2xl font-semibold">Morning</h2>
+                    <p class="mt-2 text-sm text-gray-600">Start indoors at one museum. It is cooler, easier to focus, and gives you useful background before walking outside.</p>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold">Afternoon</h2>
+                    <p class="mt-2 text-sm text-gray-600">Choose one cultural street. Do not try to cover too many areas, because the details are easier to notice when the route is shorter.</p>
+                </div>
+                <div class="rounded-lg border bg-gray-50 p-5">
+                    <h2 class="text-xl font-semibold">Reflection Point</h2>
+                    <p class="mt-2 text-sm text-gray-600">Compare what you learned from museum displays with what you noticed in the streets. The street walk makes the history feel less distant.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-10 md:px-12 lg:px-20">
+            <h2 class="text-2xl font-semibold">How I Would Combine Them</h2>
+            <p class="mt-2 max-w-3xl text-gray-600">Start with one museum in the morning, then visit one cultural street later in the day. That makes the page feel less like a checklist and more like a small route visitors can actually follow.</p>
         </section>
     </main>
 
-    <footer class="flex justify-between border-b border-t p-10">
+    <footer class="flex justify-between border-t p-10 bg-gray-800 text-white">
         <p>Singapore Tourism</p>
         <p>&copy; Singapore</p>
     </footer>

@@ -1,3 +1,7 @@
+
+// This is an immediately invoked function expression (IIFE)
+// It's a function that is created and immediately executed.
+
 (() => {
 
 // Mobile Navigations
@@ -61,17 +65,16 @@ exploreItem.addEventListener("mouseleave", closeDropdown)
 desktopDropdown.addEventListener("mouseenter", openDropdown)
 desktopDropdown.addEventListener("mouseleave", closeDropdown)
 
-    // Script for setting correct href to the correct webpage for the Navigation Bar
+    // Script for setting href to the correct webpage for the Navigation Bar
+
     const routes = {
-        "Landmarks": "pages/attractions/attraction1.html",
-        "Iconic Landmarks": "pages/attractions/attraction1.html",
-        "Nature & Wildlife": "pages/attractions/attraction2.html",
+        "Landmarks": "pages/attractions/iconic-landmarks.html",
+        "Nature & Wildlife": "pages/attractions/nature-areas.html",
         "Photo spots": "pages/attractions/photo-spots.html",
-        "Heritage Districts": "pages/culture-heritage/webpage6.html",
-        "Religious Heritage Sites": "pages/culture-heritage/webpage7.html",
-        "Museums & Cultural Streets": "pages/culture-heritage/webpage8.html",
-        "Museums and Cultural Streets": "pages/culture-heritage/webpage8.html",
-        "Singapore's food culture": "pages/food-shopping/fs1.html",
+        "Heritage Districts": "pages/culture-heritage/heritage-districts.html",
+        "Religious Heritage Sites": "pages/culture-heritage/heritage-sites.html",
+        "Museums & Cultural Streets": "pages/culture-heritage/museum-cultural-streets.html",
+        "Singapore's food culture": "pages/food-shopping/local-dishes.html",
         "Shopping experience": "pages/food-shopping/fs2.html",
         "Food & Shopping tips": "pages/food-shopping/fs3.html",
         "Practical tips": "pages/practical-tips.html",

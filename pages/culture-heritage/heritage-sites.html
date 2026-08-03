@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="../../assets/js/navbar.js"></script>
-    <title>Museums and Cultural Streets</title>
+    <title>Religious Heritage Sites</title>
 </head>
 
-<body class="flex min-h-screen flex-col bg-white text-gray-900">
+<body class="flex min-h-screen flex-col bg-white text-gray-900 font-['Inter']">
 
     <header class="h-20">
         <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
@@ -104,45 +107,119 @@
     </header>
 
     <main class="flex-1 bg-gray-50">
-        <section class="mx-auto max-w-4xl px-6 py-12 md:py-16">
-            <h1 class="text-3xl font-bold">Museums and Cultural Streets</h1>
-            <p class="mt-3 max-w-3xl text-gray-600">Learn about Singapore through museums, galleries, preserved streets, and neighbourhood walks.</p>
-        </section>
-
-        <section class="mx-auto max-w-4xl px-6 pb-12">
-            <h2 class="text-2xl font-semibold">Places to Explore</h2>
-            <div class="mt-5 grid gap-4 sm:grid-cols-2">
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">National Museum</h3>
-                    <p class="mt-2 text-sm text-gray-600">Exhibitions, old photos, and stories about Singapore's past.</p>
-                </article>
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">Asian Civilisations Museum</h3>
-                    <p class="mt-2 text-sm text-gray-600">Artefacts about Asian cultures, trade, and migration.</p>
-                </article>
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">Joo Chiat Road</h3>
-                    <p class="mt-2 text-sm text-gray-600">Colourful Peranakan shophouses and local food.</p>
-                </article>
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">Emerald Hill</h3>
-                    <p class="mt-2 text-sm text-gray-600">Preserved houses near modern Orchard Road.</p>
-                </article>
+        <section class="px-6 py-12 md:px-12 md:py-16 lg:px-20">
+            <div class="max-w-3xl">
+                <p class="text-sm font-semibold uppercase tracking-wide text-red-500">Culture &amp; Heritage</p>
+                <h1 class="mt-2 text-3xl font-bold">Religious Heritage Sites</h1>
+                <p class="mt-3 text-gray-600">Singapore's religious buildings are not hidden away from daily life. Many of them sit beside MRT stations, offices, food streets, and older shophouses, which makes them useful for understanding the city beyond tourist photos.</p>
             </div>
         </section>
 
-        <section class="mx-auto max-w-4xl px-6 pb-14">
-            <div class="rounded-lg bg-white p-6 shadow-sm">
-                <h2 class="text-2xl font-semibold">Visitor Tip</h2>
-                <p class="mt-2 text-gray-600">Choose one museum and one walking street to compare indoor and outdoor cultural experiences.</p>
+        <section class="px-6 pb-12 md:px-12 lg:px-20">
+            <div class="grid gap-6 lg:grid-cols-[0.7fr_1.3fr]">
+                <aside class="rounded-lg bg-gray-900 p-6 text-white">
+                    <h2 class="text-2xl font-semibold">How to Read This Page</h2>
+                    <p class="mt-3 text-sm text-gray-200">Instead of treating the sites like a checklist, compare what each place shows: architecture, community, location, and visitor behaviour.</p>
+                    <div class="mt-6 border-t border-white/20 pt-4 text-sm text-gray-200">
+                        <p class="font-semibold text-white">Focus point:</p>
+                        <p class="mt-1">Notice how each site fits into daily life, from nearby shops to the people moving through the area.</p>
+                    </div>
+                </aside>
+
+                <div class="grid gap-4 md:grid-cols-2">
+                    <article class="overflow-hidden rounded-lg border-l-4 border-red-500 bg-white shadow-sm">
+                        <img src="../../assets/images/Sri_Mariamman_Temple_2.jpg" alt="Sri Mariamman Temple entrance" class="h-44 w-full object-cover">
+                        <div class="p-5">
+                            <h2 class="text-lg font-semibold">Sri Mariamman Temple</h2>
+                            <p class="mt-2 text-sm text-gray-600">A Hindu temple in Chinatown. The entrance tower is detailed, so it is worth stopping outside before going in.</p>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden rounded-lg border-l-4 border-red-500 bg-white shadow-sm">
+                        <img src="../../assets/images/sultan.jpeg" alt="Sultan Mosque golden dome" class="h-44 w-full object-cover">
+                        <div class="p-5">
+                            <h2 class="text-lg font-semibold">Sultan Mosque</h2>
+                            <p class="mt-2 text-sm text-gray-600">One of the most recognisable landmarks in Kampong Gelam, especially because of the golden dome and the open space around it.</p>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden rounded-lg border-l-4 border-red-500 bg-white shadow-sm">
+                        <img src="../../assets/images/Thian Hock Keng.jpg" alt="Thian Hock Keng Temple facade" class="h-44 w-full object-cover">
+                        <div class="p-5">
+                            <h2 class="text-lg font-semibold">Thian Hock Keng Temple</h2>
+                            <p class="mt-2 text-sm text-gray-600">A historic Chinese temple near Telok Ayer. It feels interesting because it sits close to the modern CBD.</p>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden rounded-lg border-l-4 border-red-500 bg-white shadow-sm">
+                        <img src="../../assets/images/saint.jpg" alt="St Andrew's Cathedral exterior" class="h-44 w-full object-cover">
+                        <div class="p-5">
+                            <h2 class="text-lg font-semibold">St Andrew's Cathedral</h2>
+                            <p class="mt-2 text-sm text-gray-600">A white cathedral near City Hall. The building stands out because the area around it is busy and very urban.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white px-6 py-10 md:px-12 lg:px-20">
+            <div class="grid gap-6 md:grid-cols-[1fr_1fr_0.8fr]">
+                <div>
+                    <h2 class="text-2xl font-semibold">Before Visiting</h2>
+                    <p class="mt-2 text-gray-600">Wear something comfortable and respectful. Some places may have rules for shoes, photography, or quiet areas, so check the signs before entering.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold">What to Compare</h3>
+                    <ul class="mt-3 space-y-3 text-sm text-gray-600">
+                        <li class="flex gap-3" data-checklist-item>
+                            <input type="checkbox" class="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-red-500">
+                            <span>
+                                Check how the building looks from the street.
+                                <span class="checklist-reminder mt-1 hidden block font-semibold text-red-500">Have you done this yet?</span>
+                            </span>
+                        </li>
+                        <li class="flex gap-3" data-checklist-item>
+                            <input type="checkbox" class="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-red-500">
+                            <span>
+                                Notice whether the area is quiet or crowded.
+                                <span class="checklist-reminder mt-1 hidden block font-semibold text-red-500">Have you done this yet?</span>
+                            </span>
+                        </li>
+                        <li class="flex gap-3" data-checklist-item>
+                            <input type="checkbox" class="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-red-500">
+                            <span>
+                                Compare how the site connects to the neighbourhood around it.
+                                <span class="checklist-reminder mt-1 hidden block font-semibold text-red-500">Have you done this yet?</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <button id="checklist-submit" type="button" class="mt-4 rounded-md bg-red-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-600">
+                        Submit
+                    </button>
+                </div>
+                <div class="rounded-lg border bg-gray-50 p-5">
+                    <h3 class="font-semibold">Small reminder</h3>
+                    <p class="mt-2 text-sm text-gray-600">These are active religious places, not just photo spots. Visit calmly and follow the posted rules.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="flex justify-between border-t p-10 bg-gray-800 text-white">
+    <footer class="flex justify-between border-b border-t p-10">
         <p>Singapore Tourism</p>
         <p>&copy; Singapore</p>
     </footer>
+
+    <script>
+        const checklistItems = document.querySelectorAll("[data-checklist-item]");
+        const checklistSubmit = document.getElementById("checklist-submit");
+
+        checklistSubmit.addEventListener("click", function () {
+            checklistItems.forEach(function (item) {
+                const checkbox = item.querySelector("input[type='checkbox']");
+                const reminder = item.querySelector(".checklist-reminder");
+
+                reminder.classList.toggle("hidden", checkbox.checked);
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -7,161 +7,260 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="../../assets/js/navbar.js"></script>
     <script defer src="../../assets/js/photo-spots.js"></script>
-    <title>Practical Tips | Singapore Tourism</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Photo Spots | Singapore Tourism</title>
 </head>
 
-<body class="flex min-h-screen flex-col bg-gray-50">
+<body class="flex min-h-screen flex-col bg-gray-50 font-['Inter']">
 
+    <!-- Navigation -->
     <header class="h-16 md:h-20">
         <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
             <div class="flex h-16 md:h-20 items-center justify-between px-6 md:px-4">
                 <div class="md:ms-5">
                     <a href="../../index.html" aria-label="Singapore Tourism home" class="flex flex-row gap-1.5 md:gap-3">
-                        <img src="../../assets/images/sg.png" alt="Singapore Tourism"
-                            class="h-9 w-9 object-cover md:h-12 md:w-12">
-                        <span class="m-0 pt-0.5 text-xs font-semibold md:mt-3 md:p-0 md:text-base">Singapore <br
-                                class="md:hidden">Tourism</span>
+                        <img src="../../assets/images/sg.png" alt="Singapore Tourism" class="h-9 w-9 object-cover md:h-12 md:w-12">
+                        <span class="m-0 pt-0.5 text-xs font-semibold md:mt-3 md:p-0 md:text-base">Singapore <br class="md:hidden">Tourism</span>
                     </a>
                 </div>
-    
+
                 <ul class="hidden h-full items-center me-5 text-xl font-semibold md:flex md:gap-10 lg:gap-14">
                     <li id="explore-item" class="flex h-full items-center">
-                        <button id="explore-trigger" type="button" aria-haspopup="true" aria-expanded="false"
-                            class="border-b-2 border-transparent">Explore</button>
+                        <button id="explore-trigger" type="button" aria-haspopup="true" aria-expanded="false" class="border-b-2 border-transparent">Explore</button>
                     </li>
                     <li class="h-full flex items-center">
-                        <a href="../practical-tips.html" class="border-b-2 border-transparent hover:border-red-500">Practical
-                            tips</a>
+                        <a href="../../pages/practical-tips.html"
+                            class="border-b-2 border-transparent hover:border-red-500">Practical tips</a>
                     </li>
                     <li class="h-full flex items-center">
-                        <a href="../contact-us.html" class="border-b-2 border-transparent hover:border-red-500">Contact us</a>
+                        <a href="../../pages/contact-us.html"
+                            class="border-b-2 border-transparent hover:border-red-500">Contact
+                            us</a>
                     </li>
                 </ul>
-    
+
                 <button id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden">
                     <img src="../../assets/images/menu.svg" alt="Menu" class="h-6 w-6">
                 </button>
             </div>
-    
+
             <div id="desktop-dropdown" class="max-h-0 overflow-hidden transition-[max-height] duration-300">
                 <div class="grid grid-cols-3 ms-5 gap-22 px-6 pt-4 pb-4 text-xl lg:ms-7">
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Attractions</h2>
                         <ul class="mt-1 leading-7">
-                            <li><a href="#"
+                            <li><a href="../../pages/attractions/attraction1.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Landmarks</a>
                             </li>
-                            <li><a href="#"
+                            <li><a href="../../pages/attractions/attraction2.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Nature
                                     &amp; Wildlife</a></li>
-                            <li><a href="photo-spots.html"
+                            <li><a href="../../pages/attractions/photo-spots.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Photo
                                     spots</a></li>
                         </ul>
                     </section>
-    
+
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Culture &amp; Heritage</h2>
                         <ul class="mt-1 leading-7">
-                            <li><a href="#"
+                            <li><a href="../../pages/culture-heritage/webpage6.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Heritage
                                     Districts</a></li>
-                            <li><a href="#"
+                            <li><a href="../../pages/culture-heritage/webpage7.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Religious
                                     Heritage Sites</a></li>
-                            <li><a href="#"
+                            <li><a href="../../pages/culture-heritage/webpage8.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Museums
                                     &amp; Cultural Streets</a></li>
                         </ul>
                     </section>
-    
+
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Food &amp; Shopping</h2>
                         <ul class="mt-1 leading-7">
-                            <li><a href="#"
+                            <li><a href="../../pages/food-shopping/fs1.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Singapore's
                                     food culture</a></li>
-                            <li><a href="#"
+                            <li><a href="../../pages/food-shopping/fs2.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Shopping
                                     experience</a></li>
-                            <li><a href="#"
+                            <li><a href="../../pages/food-shopping/fs3.html"
                                     class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Food
                                     &amp; Shopping tips</a></li>
                         </ul>
                     </section>
                 </div>
             </div>
-    
-            <div id="mobile-menu" class="max-h-0 overflow-hidden bg-white transition-[max-height] duration-300 md:hidden">
+
+            <div id="mobile-menu"
+                class="max-h-0 overflow-hidden bg-white transition-[max-height] duration-300 md:hidden">
                 <ul class="flex flex-col gap-3 px-6 py-5 text-lg font-semibold">
                     <li>
                         <button type="button"
-                            class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Attractions
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Attractions</span>
+                            <img src="../../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
                         </button>
                         <ul
                             class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
-                            <li><a href="#"
-                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature
-                                    &amp; Wildlife</a></li>
-                            <li><a href="#"
+                            <li><a href="../../pages/attractions/attraction1.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Iconic
                                     Landmarks</a></li>
-                            <li><a href="photo-spots.html"
+                            <li><a href="../../pages/attractions/attraction2.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature
+                                    & Wildlife</a></li>
+                            <li><a href="../../pages/attractions/photo-spots.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Photo
                                     spots</a></li>
                         </ul>
                     </li>
                     <li>
                         <button type="button"
-                            class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Culture
-                            &amp; Heritage</button>
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Culture &
+                                Heritage</span>
+                            <img src="../../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
                         <ul
                             class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
-                            <li><a href="#"
+                            <li><a href="../../pages/culture-heritage/webpage6.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Heritage
                                     Districts</a></li>
-                            <li><a href="#"
+                            <li><a href="../../pages/culture-heritage/webpage7.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Religious
                                     Heritage Sites</a></li>
-                            <li><a href="#"
+                            <li><a href="../../pages/culture-heritage/webpage8.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Museums
-                                    and Cultural Streets</a></li>
+                                    & Cultural Streets</a></li>
                         </ul>
                     </li>
                     <li>
                         <button type="button"
-                            class="mobile-dropdown-buttons inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Food
-                            &amp; Shopping</button>
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Food &
+                                Shopping</span>
+                            <img src="../../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
                         <ul
                             class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
-                            <li><a href="#"
+                            <li><a href="../../pages/food-shopping/fs1.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Singapore's
                                     food culture</a></li>
-                            <li><a href="#"
+                            <li><a href="../../food-shopping/fs2.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Shopping
                                     experience</a></li>
-                            <li><a href="#"
+                            <li><a href="../../pages/food-shopping/fs3.html"
                                     class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Food
-                                    &amp; Shopping tips</a></li>
+                                    & Shopping tips</a></li>
                         </ul>
                     </li>
-                    <li><a href="../practical-tips.html"
+                    <li><a href="../../pages/practical-tips.html"
                             class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Practical
                             tips</a></li>
-                    <li><a href="../contact-us.html"
+                    <li><a href="../../pages/contact-us.html"
                             class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Contact
                             us</a></li>
-    
+
                 </ul>
             </div>
         </nav>
     </header>
 
     <main class="flex-1">
+        <section class="mx-auto max-w-6xl px-5 py-8 md:px-10 md:py-12 lg:py-20">
+            <!-- Page Title -->
+            <div>
+                <p class="text-sm font-bold uppercase tracking-[0.18em] text-red-500">Explore Singapore</p>
+                <h1 class="mt-2 text-4xl font-bold tracking-tight md:text-5xl">Photo Spots</h1>
+                <p class="mt-0 max-w-2xl text-lg leading-7 text-gray-600 md:mt-4">Capture unforgettable moments at Singapore's most scenic spots.</p>
+            </div>
 
+            <!-- Image Carousel -->
+             <section class="relative mt-8 w-full">
+                <div id="carousel-container" class="group relative h-[40vh] overflow-hidden rounded-xl min-[375px]:h-[50vh] min-[425px]:h-[60vh] lg:h-[70vh]">
+                    <img id="carousel-image" src="../../assets/images/practical-tips-banner.jpg" class="relative h-full w-full object-cover transition-opacity duration-300">
+                    <div class="absolute inset-0 z-10 bg-black/30 opacity-0 transition-opacity duration-300 hidden md:block group-hover:opacity-100"></div>
+                    <div class="absolute bottom-0 left-0 right-0 z-20 flex h-fit justify-between items-center bg-black text-white p-1 md:hidden">
+                        <h2 class="carousel-title text-sm font-bold">Fort Canning Tree Tunnel</h2>
+                        <p class="text-xs">Learn more ⟶</p>
+                    </div>
+                    <div class="absolute inset-0 z-20 hidden flex-col justify-center items-center text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:flex">
+                        <h2 class="carousel-title text-5xl font-bold">Fort Canning Tree Tunnel</h2>
+                        <p class="pt-2 text-sm">Learn more ⟶</p>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <button id="prev-button" class="absolute left-0 top-0 z-30 h-full w-fit bg-black/60 opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                            <img src="../../assets/images/chevron-left.png" class="h-8 w-8">
+                        </button>
+
+                        <button id="next-button" class="absolute right-0 top-0 z-30 h-full w-fit bg-black/60 opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                            <img src="../../assets/images/chevron-right.png" class="h-8 w-8">
+                        </button>
+                    </div>
+                </div>
+                <div id="carousel-indicators" class="mt-3 flex justify-center gap-1">
+                    <div class="indicator h-1 w-10 rounded-full bg-red-500 transition-all duration-75 md:w-15 lg:w-20"></div>
+                    <div class="indicator h-1 w-10 rounded-full bg-gray-300 transition-all duration-75 md:w-15 lg:w-20"></div>
+                    <div class="indicator h-1 w-10 rounded-full bg-gray-300 transition-all duration-75 md:w-15 lg:w-20"></div>
+                    <div class="indicator h-1 w-10 rounded-full bg-gray-300 transition-all duration-75 md:w-15 lg:w-20"></div>
+                </div>
+             </section>
+
+             <!-- Photo Spots -->
+            <section class="mt-20 flex w-full flex-col gap-20">
+                <div id="spot1" class="scroll-mt-24">
+                    <h2 class="font-bold text-xl md:text-2xl mb-1">Spot 1</h2>
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+                        <img src="../../assets/images/practical-tips-banner.jpg" alt="" class="object-cover aspect-4/3 object-center w-full md:w-1/2">
+                        <p class="flex-1 text-sm md:text-base leading-6 text-wrap">Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Dolorem, placeat. Aspernatur, ipsum, consequatur mollitia veniam molestias
+                            consequuntur laborum ipsam nisi repudiandae odit ex expedita commodi ab quis nemo libero
+                            adipisci!</p>
+                    </div>
+                </div>
+
+                <div id="spot2" class="scroll-mt-24">
+                    <h2 class="font-bold text-xl md:text-2xl mb-1">Spot 2</h2>
+                    <div class="flex flex-col md:flex-row-reverse gap-4 md:gap-8">
+                        <img src="../../assets/images/practical-tips-banner.jpg" alt="" class="object-cover aspect-4/3 object-center w-full md:w-1/2">
+                        <p class="flex-1 text-sm md:text-base leading-6 text-wrap">Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Dolorem, placeat. Aspernatur, ipsum, consequatur mollitia veniam molestias
+                            consequuntur laborum ipsam nisi repudiandae odit ex expedita commodi ab quis nemo libero
+                            adipisci!</p>
+                    </div>
+                </div>
+
+                <div id="spot3" class="scroll-mt-24">
+                    <h2 class="font-bold text-xl md:text-2xl mb-1">Spot 3</h2>
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-8">
+                        <img src="../../assets/images/practical-tips-banner.jpg" alt="" class="object-cover aspect-4/3 object-center w-full md:w-1/2">
+                        <p class="flex-1 text-sm md:text-base leading-6 text-wrap">Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Dolorem, placeat. Aspernatur, ipsum, consequatur mollitia veniam molestias
+                            consequuntur laborum ipsam nisi repudiandae odit ex expedita commodi ab quis nemo libero
+                            adipisci!</p>
+                    </div>
+                </div>
+
+                <div id="spot4" class="scroll-mt-24">
+                    <h2 class="font-bold text-xl md:text-2xl mb-1">Spot 4</h2>
+                    <div class="flex flex-col md:flex-row-reverse gap-4 md:gap-8">
+                        <img src="../../assets/images/practical-tips-banner.jpg" alt="" class="object-cover aspect-4/3 object-center w-full md:w-1/2">
+                        <p class="flex-1 text-sm md:text-base leading-6 text-wrap">Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Dolorem, placeat. Aspernatur, ipsum, consequatur mollitia veniam molestias
+                            consequuntur laborum ipsam nisi repudiandae odit ex expedita commodi ab quis nemo libero
+                            adipisci!</p>
+                    </div>
+                </div>
+            </section>
+        </section>
     </main>
 
-    <footer class="bg-gray-800">
+    <footer class="bg-gray-800 w-full">
         <div
             class="flex flex-col items-center gap-1 p-3 text-xs text-white md:flex-row md:justify-between md:gap-0 md:p-5 md:text-sm lg:p-6 lg:text-base">
             <p>Singapore Tourism</p>

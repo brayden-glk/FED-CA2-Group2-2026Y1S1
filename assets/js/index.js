@@ -61,46 +61,44 @@ function typewrite(){
     }
 };
 
-if (typewriter) {
-    typewrite();
-}
-
+typewrite();
 
 // Interactive Map (Home Page)
 const places = {
     "changi-airport": {
         title: "Changi Airport",
         description: "One of the world's best airports, known for it's iconic waterfall",
-        link: "pages/attractions/attraction1.html"
+        link: "pages/attractions/attraction1.html",
+        img: "assets/images/changiairport.jpg"
     },
 
     "marina-bay-sands": {
         title: "Marina Bay Sands",
         description: "Renowned for its distinctive three-tower design topped by the SkyPark and more",
-        link: "pages/attractions/attraction1.html"
+        link: "pages/attractions/attraction1.html",
     },
 
     "chinatown": {
         title: "Chinatown",
         description: "Singapore's rich Chinese heritage via historic temples and colorful shophouses",
-        link: "pages/culture-heritage/webpage6.html"
+        link: "pages/culture-heritage/webpage6.html",
     },
 
     "gardens-by-the-bay": {
         title: "Gardens by the Bay",
         description: "Singapore's iconic nature park featuring the Supertree Grove and stunning waterfront gardens",
-        link: "pages/attractions/attraction1.html"
+        link: "pages/attractions/attraction1.html",
     },
     "sentosa": {
         title: "Sentosa",
         description: "Sandy beaches, thrilling attractions, and world-class entertainment destinations",
-        link: "pages/attractions/attraction1.html"
+        link: "pages/attractions/attraction1.html",
     },
 
     "orchard": {
         title: "Orchard Road",
         description: "Singapore's famous retail boulevard, home to luxury boutiques, shopping malls, and diverse dining experiences.",
-        link: "pages/food-shopping/fs1.html"
+        link: "pages/food-shopping/fs1.html",
     }
 };
 
@@ -113,6 +111,7 @@ document.querySelectorAll(".hotspot").forEach(hotspot => {
     document.querySelector("#title").textContent = places[place].title
     document.querySelector("#description").textContent = places[place].description
     document.querySelector("#link").setAttribute("href", places[place].link)
+    document.querySelector("#img-popup").setAttribute("src", places[place].img)
 
     document.querySelector("#popup").classList.remove("opacity-0", "scale-90", "pointer-events-none")
     document.querySelector("#popup").classList.add("scale-100")

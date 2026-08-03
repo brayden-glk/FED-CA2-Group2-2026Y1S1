@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../../assets/js/navbar.js"></script>
+    <title>food-shopping</title>
+</head>
+
+<body class="flex min-h-screen flex-col bg-gray-50">
+
+    <header class="h-16 md:h-20">
+        <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
+            <div class="flex h-16 md:h-20 items-center justify-between px-6 md:px-4">
+                <div class="md:ms-5">
+                    <a href="../../index.html" aria-label="Singapore Tourism home" class="flex flex-row gap-1.5 md:gap-3">
+                        <img src="../assets/images/sg.png" alt="Singapore Tourism"
+                            class="h-9 w-9 object-cover md:h-12 md:w-12">
+                        <span class="m-0 pt-0.5 text-xs font-semibold md:mt-3 md:p-0 md:text-base">Singapore <br
+                                class="md:hidden">Tourism</span>
+                    </a>
+                </div>
+
+                <ul class="hidden h-full items-center me-5 text-xl font-semibold md:flex md:gap-10 lg:gap-14">
+                    <li id="explore-item" class="flex h-full items-center">
+                        <button id="explore-trigger" type="button" aria-haspopup="true" aria-expanded="false"
+                            class="border-b-2 border-transparent">Explore</button>
+                    </li>
+                    <li class="h-full flex items-center">
+                        <a href="../pages/practical-tips.html"
+                            class="border-b-2 border-transparent hover:border-red-500">Practical tips</a>
+                    </li>
+                    <li class="h-full flex items-center">
+                        <a href="../pages/contact-us.html"
+                            class="border-b-2 border-transparent hover:border-red-500">Contact
+                            us</a>
+                    </li>
+                </ul>
+
+                <button id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden">
+                    <img src="../assets/images/menu.svg" alt="Menu" class="h-6 w-6">
+                </button>
+            </div>
+
+            <div id="desktop-dropdown" class="max-h-0 overflow-hidden transition-[max-height] duration-300">
+                <div class="grid grid-cols-3 ms-5 gap-22 px-6 pt-4 pb-4 text-xl lg:ms-7">
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Attractions</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="../pages/attractions/attraction1.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Landmarks</a>
+                            </li>
+                            <li><a href="../pages/attractions/attraction2.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Nature
+                                    &amp; Wildlife</a></li>
+                            <li><a href="../pages/attractions/photo-spots.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Photo
+                                    spots</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Culture &amp; Heritage</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="../pages/culture-heritage/webpage6.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Heritage
+                                    Districts</a></li>
+                            <li><a href="../pages/culture-heritage/webpage7.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Religious
+                                    Heritage Sites</a></li>
+                            <li><a href="../pages/culture-heritage/webpage8.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Museums
+                                    &amp; Cultural Streets</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-base lg:text-lg font-bold">Food &amp; Shopping</h2>
+                        <ul class="mt-1 leading-7">
+                            <li><a href="../pages/food-shopping/fs1.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Singapore's
+                                    food culture</a></li>
+                            <li><a href="../pages/food-shopping/fs2.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Shopping
+                                    experience</a></li>
+                            <li><a href="../pages/food-shopping/fs3.html"
+                                    class="inline-block text-sm transition duration-75 hover:scale-105 hover:text-red-500 lg:text-base">Food
+                                    &amp; Shopping tips</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="max-h-0 overflow-hidden bg-white transition-[max-height] duration-300 md:hidden">
+                <ul class="flex flex-col gap-3 px-6 py-5 text-lg font-semibold">
+                    <li>
+                        <button type="button"
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Attractions</span>
+                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
+                        <ul
+                            class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="../pages/attractions/attraction1.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Iconic
+                                    Landmarks</a></li>
+                            <li><a href="../pages/attractions/attraction2.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Nature
+                                    & Wildlife</a></li>
+                            <li><a href="../pages/attractions/photo-spots.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Photo
+                                    spots</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button"
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Culture &
+                                Heritage</span>
+                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
+                        <ul
+                            class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="../pages/culture-heritage/webpage6.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Heritage
+                                    Districts</a></li>
+                            <li><a href="../pages/culture-heritage/webpage7.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Religious
+                                    Heritage Sites</a></li>
+                            <li><a href="../pages/culture-heritage/webpage8.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Museums
+                                    & Cultural Streets</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button"
+                            class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
+                            <span class="transition duration-75 hover:text-red-500 hover:scale-105">Food &
+                                Shopping</span>
+                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                                class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
+                        </button>
+                        <ul
+                            class="mobile-dropdown-menus max-h-0 overflow-hidden mt-2 gap-2 border-l-2 border-red-100 pl-4 text-sm font-normal transition-[max-height] duration-300">
+                            <li><a href="../pages/food-shopping/fs1.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Singapore's
+                                    food culture</a></li>
+                            <li><a href="../food-shopping/fs2.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Shopping
+                                    experience</a></li>
+                            <li><a href="../pages/food-shopping/fs3.html"
+                                    class="inline-block transition duration-75 hover:text-red-500 hover:scale-105">Food
+                                    & Shopping tips</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/practical-tips.html"
+                            class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Practical
+                            tips</a></li>
+                    <li><a href="../pages/contact-us.html"
+                            class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Contact
+                            us</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="text-center py-12">
+        <h1 class="text-4xl font-bold">Singapore - A Food Paradise</h1>
+        <p class="text-lg mt-2">Experience the diverse flavors of Singapore</p>
+    </section>
+
+    <!-- ===================== SECTION 1: HAWKER CENTRES ===================== -->
+    <section class="flex flex-col md:flex-row items-center px-8 py-12">
+        <div class="overflow-hidden rounded shadow-lg w-full md:w-100%">
+            <img src="../../assets/images/hawker.jpg" alt="Hawker Centre in Singapore"
+                class="w-full object-cover transform transition duration-500 hover:scale-110">
+        </div>
+
+        <div class="md:ml-8 mt-6 md:mt-0">
+            <h2 class="text-2xl font-bold mb-4">Hawker Centres: Heart of Daily Life</h2>
+            <p>
+                Hawker centres are central to Singapore's food culture, offering affordable and authentic dishes.
+                They reflect the multicultural identity of Singapore and are loved by both locals and tourists.
+                Morning visits are perfect for traditional breakfasts, evenings bring lively crowds, and weekends
+                showcase the full variety of stalls.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 2: FILTER BUTTONS ===================== -->
+    <section class="px-8 py-12">
+        <h2 class="text-2xl font-bold mb-6">Popular Local Dishes</h2>
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-4 mb-6">
+            <button class="filter-btn bg-red-500 text-white px-4 py-2 rounded" data-category="all">All</button>
+            <button class="filter-btn bg-red-500 text-white px-4 py-2 rounded" data-category="chinese">Chinese</button>
+            <button class="filter-btn bg-red-500 text-white px-4 py-2 rounded" data-category="malay">Malay</button>
+            <button class="filter-btn bg-red-500 text-white px-4 py-2 rounded" data-category="indian">Indian</button>
+            <button class="filter-btn bg-red-500 text-white px-4 py-2 rounded" data-category="western">Western</button>
+        </div>
+
+        <!-- ===================== SECTION 3: DISH GALLERY ===================== -->
+        <div class="flex space-x-6 overflow-x-auto pb-4 scrollbar-thin" id="dish-gallery">
+
+            <!-- 1. Chicken Rice -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="chinese">
+                <img src="../../assets/images/chicken-rice.jpg" alt="Chicken Rice"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Chicken Rice</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Chicken Rice</h3>
+                    <p class="text-sm mb-2">"The national dish loved by all!"</p>
+                    <p class="text-xs italic">User comments: "Best hawker food ever!"</p>
+                </div>
+            </div>
+
+            <!-- 2. Laksa -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="malay">
+                <img src="../../assets/images/laksa.jpg" alt="Laksa"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Laksa</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Laksa</h3>
+                    <p class="text-sm mb-2">"Spicy coconut noodle soup."</p>
+                    <p class="text-xs italic">User comments: "Comfort food with a kick!"</p>
+                </div>
+            </div>
+
+            <!-- 3. Chili Crab -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="chinese">
+                <img src="../../assets/images/chili-crab.jpg" alt="Chili Crab"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Chili Crab</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Chili Crab</h3>
+                    <p class="text-sm mb-2">"Sweet, spicy, and messy fun!"</p>
+                    <p class="text-xs italic">User comments: "A must-try seafood dish."</p>
+                </div>
+            </div>
+
+            <!-- 4. Satay -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="malay">
+                <img src="../../assets/images/satay.jpg" alt="Satay"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Satay</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Satay</h3>
+                    <p class="text-sm mb-2">"Grilled skewers with peanut sauce."</p>
+                    <p class="text-xs italic">User comments: "Perfect street snack!"</p>
+                </div>
+            </div>
+
+            <!-- 5. Roti Prata -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="indian">
+                <img src="../../assets/images/roti-prata.jpg" alt="Roti Prata"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Roti Prata</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Roti Prata</h3>
+                    <p class="text-sm mb-2">"Crispy flatbread with curry."</p>
+                    <p class="text-xs italic">User comments: "Best breakfast choice!"</p>
+                </div>
+            </div>
+
+            <!-- 6. Nasi Lemak -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="malay">
+                <img src="../../assets/images/nasi-lemak.jpg" alt="Nasi Lemak"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Nasi Lemak</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Nasi Lemak</h3>
+                    <p class="text-sm mb-2">"Coconut rice with sambal."</p>
+                    <p class="text-xs italic">User comments: "Fragrant and filling."</p>
+                </div>
+            </div>
+
+            <!-- 7. Kaya Toast -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="chinese">
+                <img src="../../assets/images/kaya-toast.jpg" alt="Kaya Toast"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Kaya Toast</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Kaya Toast</h3>
+                    <p class="text-sm mb-2">"Sweet coconut jam toast."</p>
+                    <p class="text-xs italic">User comments: "Classic breakfast set!"</p>
+                </div>
+            </div>
+
+            <!-- 8. Ice Kacang -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="chinese">
+                <img src="../../assets/images/ice-kacang.jpg" alt="Ice Kacang"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Ice Kacang</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Ice Kacang</h3>
+                    <p class="text-sm mb-2">"Shaved ice with colorful toppings."</p>
+                    <p class="text-xs italic">User comments: "Refreshing on hot days!"</p>
+                </div>
+            </div>
+
+            <!-- 9. Hokkien Mee -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="chinese">
+                <img src="../../assets/images/hokkien-mee.jpg" alt="Hokkien Mee"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Hokkien Mee</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Hokkien Mee</h3>
+                    <p class="text-sm mb-2">"Stir-fried noodles with prawn stock."</p>
+                    <p class="text-xs italic">User comments: "Savory and rich flavor!"</p>
+                </div>
+            </div>
+
+            <!-- 10. Fish and Chips -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="western">
+                <img src="../../assets/images/fish-and-chips.jpg" alt="Fish and Chips"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Fish and Chips</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Fish and Chips</h3>
+                    <p class="text-sm mb-2">"Crispy battered fish with fries."</p>
+                    <p class="text-xs italic">User comments: "Classic Western comfort food!"</p>
+                </div>
+            </div>
+
+
+            <!-- 11. Mee Goreng -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="malay">
+                <img src="../../assets/images/mee-goreng.jpg" alt="Mee Goreng"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Mee Goreng</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Mee Goreng</h3>
+                    <p class="text-sm mb-2">"Spicy fried noodles with egg and sambal."</p>
+                    <p class="text-xs italic">User comments: "Fiery and satisfying!"</p>
+                </div>
+            </div>
+
+            <!-- 12. Fish Head Curry -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="indian">
+                <img src="../../assets/images/fish-head-curry.jpg" alt="Fish Head Curry"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Fish Head Curry</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Fish Head Curry</h3>
+                    <p class="text-sm mb-2">"Tangy curry with tender fish head."</p>
+                    <p class="text-xs italic">User comments: "Unique and flavorful dish!"</p>
+                </div>
+            </div>
+
+            <!-- 13. Bak Kut Teh -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="chinese">
+                <img src="../../assets/images/bak-kut-teh.jpg" alt="Bak Kut Teh"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Bak Kut Teh</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Bak Kut Teh</h3>
+                    <p class="text-sm mb-2">"Pork rib soup with herbs and spices."</p>
+                    <p class="text-xs italic">User comments: "Comforting and aromatic."</p>
+                </div>
+            </div>
+
+            <!-- 14. Teh Tarik -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="malay">
+                <img src="../../assets/images/teh-tarik.jpg" alt="Teh Tarik"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Teh Tarik</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Teh Tarik</h3>
+                    <p class="text-sm mb-2">"Pulled milk tea with frothy top."</p>
+                    <p class="text-xs italic">User comments: "Sweet and comforting drink."</p>
+                </div>
+            </div>
+
+            <!-- 15. Rojak -->
+            <div class="dish-card relative w-64 h-80 flex-shrink-0" data-category="malay">
+                <img src="../../assets/images/rojak.jpg" alt="Rojak"
+                    class="rounded shadow hover:scale-105 transition w-full h-48 object-cover">
+                <p class="mt-2 text-center font-semibold">Rojak</p>
+                <div
+                    class="popup absolute inset-0 bg-white bg-opacity-95 hidden flex-col justify-center items-center p-4 shadow-lg">
+                    <h3 class="font-bold">Rojak</h3>
+                    <p class="text-sm mb-2">"Fruit and vegetable salad with sweet sauce."</p>
+                    <p class="text-xs italic">User comments: "Crunchy, sweet, and tangy!"</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 4: TESTIMONIALS ===================== -->
+    <section class="mt-8">
+        <h2 class="text-xl font-bold mb-6">Why Tourists Love Singapore Food</h2>
+
+        <style>
+            .flip-card {
+                width: 250px;
+                height: 150px;
+                perspective: 1000px;
+                margin: auto;
+            }
+
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+            }
+
+            .flip-card:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+
+            .flip-card-front,
+            .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                font-weight: bold;
+            }
+
+            .flip-card-front {
+                background-color: #fef2f2;
+                /* light red */
+                color: #b91c1c;
+                /* dark red text */
+            }
+
+            .flip-card-back {
+                background-color: #fde68a;
+                /* light yellow */
+                color: #78350f;
+                /* brown text */
+                transform: rotateY(180deg);
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Chicken Rice Fan</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"Best chicken rice I've ever tasted in my life!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Laksa Lover</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"The laksa broth is so rich and flavorful!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800">
+        <div
+            class="flex flex-col items-center gap-1 p-3 text-xs text-white md:flex-row md:justify-between md:gap-0 md:p-5 md:text-sm lg:p-6 lg:text-base">
+            <p>Singapore Tourism</p>
+            <p>&copy; 2026. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/fs1.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>

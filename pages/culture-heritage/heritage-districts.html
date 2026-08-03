@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="../../assets/js/navbar.js"></script>
     <script defer src="../../assets/js/heritage6.js"></script>
     <title>Heritage Districts</title>
 </head>
 
-<body class="flex min-h-screen flex-col bg-white text-gray-900">
+<body class="flex min-h-screen flex-col bg-white text-gray-900 font-['Inter']">
 
     <header class="h-20">
         <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
@@ -105,59 +108,103 @@
     </header>
 
     <main class="flex-1 bg-gray-50">
-        <section class="mx-auto max-w-4xl px-6 py-12 md:py-16">
-            <div class="overflow-hidden rounded-lg">
-                <img src="../../assets/images/heritage.webp" alt="Singapore heritage district" class="h-56 w-full object-cover transition-transform hover:scale-110">
-            </div>
-            <h1 class="mt-6 text-3xl font-bold">Heritage Districts</h1>
-            <p class="mt-3 max-w-3xl text-gray-600">Explore Singapore's historic neighbourhoods through streets, food, buildings, and community traditions.</p>
-        </section>
-
-        <section class="mx-auto max-w-4xl px-6 pb-12">
-            <h2 class="text-2xl font-semibold">Places to Visit</h2>
-            <div class="mt-5 grid gap-4 md:grid-cols-3">
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">Chinatown</h3>
-                    <p class="mt-2 text-sm text-gray-600">Temples, shophouses, street markets, and hawker food.</p>
-                </article>
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">Little India</h3>
-                    <p class="mt-2 text-sm text-gray-600">Colourful shops, temples, spices, textiles, and local food.</p>
-                </article>
-                <article class="rounded-lg border bg-white p-5">
-                    <h3 class="text-lg font-semibold">Kampong Gelam</h3>
-                    <p class="mt-2 text-sm text-gray-600">Sultan Mosque, Arab Street, Haji Lane, and murals.</p>
-                </article>
+        <section class="bg-[linear-gradient(rgba(0,0,0,0.48),rgba(0,0,0,0.48)),url('../../assets/images/heritage.webp')] bg-cover bg-center">
+            <div class="max-w-5xl px-6 py-16 text-white md:ms-12 md:py-24 lg:ms-20">
+                <p class="text-sm font-semibold uppercase tracking-wide text-red-100">Culture &amp; Heritage</p>
+                <h1 class="mt-2 text-3xl font-bold md:text-4xl">Heritage Districts</h1>
+                <p class="mt-3 max-w-2xl text-gray-100">Some parts of Singapore are better when you do not rush. The older streets have shophouses, places of worship, food stalls, and small shops sitting beside newer cafes and offices.</p>
+                <p class="mt-4 max-w-xl text-sm text-gray-200">This page focuses on three districts that visitors can realistically walk around in one afternoon.</p>
             </div>
         </section>
 
-        <section class="mx-auto max-w-4xl px-6 pb-12">
-            <div class="rounded-lg bg-white p-6 shadow-sm">
-                <h2 class="text-2xl font-semibold">Visitor Tip</h2>
-                <p class="mt-2 text-gray-600">Take a walking trail and compare how each district shows a different part of Singapore's culture.</p>
+        <section class="px-6 py-10 md:px-12 lg:px-20">
+            <div class="mb-5 max-w-3xl">
+                <h2 class="text-2xl font-semibold">Places to Visit</h2>
+                <p class="mt-2 text-gray-600">I grouped the places by neighbourhood because it is easier to plan the walk this way.</p>
+            </div>
+            <div class="grid gap-5 md:grid-cols-3">
+                <article class="overflow-hidden rounded-lg border bg-white">
+                    <img src="../../assets/images/chinatown.jpeg" alt="Chinatown heritage shophouses" class="h-40 w-full object-cover">
+                    <div class="p-5">
+                        <h2 class="text-lg font-semibold">Chinatown</h2>
+                        <p class="mt-2 text-sm text-gray-600">Good for temple stops, shophouse photos, souvenirs, and a quick meal around the market area.</p>
+                        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-400">Best stop: Buddha Tooth Relic Temple area</p>
+                    </div>
+                </article>
+                <article class="overflow-hidden rounded-lg border bg-white">
+                    <img src="../../assets/images/littleindia.jpg" alt="Little India colourful street" class="h-40 w-full object-cover">
+                    <div class="p-5">
+                        <h2 class="text-lg font-semibold">Little India</h2>
+                        <p class="mt-2 text-sm text-gray-600">The streets feel busier here, with flower stalls, spice shops, textile stores, and colourful building fronts.</p>
+                        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-400">Best stop: Serangoon Road</p>
+                    </div>
+                </article>
+                <article class="overflow-hidden rounded-lg border bg-white">
+                    <img src="../../assets/images/kampong.jpg" alt="Kampong Gelam street" class="h-40 w-full object-cover">
+                    <div class="p-5">
+                        <h2 class="text-lg font-semibold">Kampong Gelam</h2>
+                        <p class="mt-2 text-sm text-gray-600">A nice route can start at Sultan Mosque, then continue towards Arab Street and Haji Lane.</p>
+                        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-400">Best stop: Sultan Mosque</p>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section class="mx-auto max-w-4xl px-6 pb-14">
+        <section class="bg-white px-6 py-10 md:px-12 lg:px-20">
+            <div class="grid gap-5 md:grid-cols-[1.2fr_0.8fr]">
+                <div class="rounded-lg bg-white p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold">A Simple Walking Plan</h2>
+                    <p class="mt-3 text-gray-600">Pick one district instead of rushing through all three. Spend about one to two hours walking, taking photos, and comparing the older buildings with the newer shops around them.</p>
+                    <p class="mt-3 text-gray-600">For our route, Kampong Gelam works well because the main landmarks are close together and the street art makes the area feel different from the usual shopping streets.</p>
+                    <ol class="mt-4 list-decimal space-y-2 ps-5 text-sm text-gray-600">
+                        <li>Start from Sultan Mosque and take photos from the open area in front.</li>
+                        <li>Walk through Arab Street to see fabric shops and older shopfronts.</li>
+                        <li>End at Haji Lane for murals, small cafes, and brighter street scenes.</li>
+                    </ol>
+                </div>
+                <div class="rounded-lg border bg-gray-50 p-6">
+                    <h3 class="font-semibold">Quick notes</h3>
+                    <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                        <li>Morning is better for quieter photos.</li>
+                        <li>Bring water because most of the walk is outdoors.</li>
+                        <li>Check before taking photos inside religious places.</li>
+                        <li>Use the same route in reverse if you want food first.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-10 md:px-12 lg:px-20">
+            <h2 class="text-2xl font-semibold">Heritage Photo Gallery</h2>
+            <p class="mt-2 max-w-2xl text-gray-600">These images support the neighbourhood cards above, so the page does not feel like plain text only.</p>
+            <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
+                <figure class="overflow-hidden rounded-lg border bg-white">
+                    <img src="../../assets/images/chinatown2.jpg" alt="Chinatown street market" class="h-48 w-full object-cover transition-transform hover:scale-105">
+                    <figcaption class="p-3 text-sm font-semibold text-gray-700">Buddha Tooth Relic Temple area</figcaption>
+                </figure>
+                <figure class="overflow-hidden rounded-lg border bg-white">
+                    <img src="../../assets/images/littleindia2.jpg" alt="Little India street details" class="h-48 w-full object-cover transition-transform hover:scale-105">
+                    <figcaption class="p-3 text-sm font-semibold text-gray-700">Sri Veeramakaliamman Temple area</figcaption>
+                </figure>
+                <figure class="overflow-hidden rounded-lg border bg-white">
+                    <img src="../../assets/images/haji.webp" alt="Haji Lane murals" class="h-48 w-full object-cover transition-transform hover:scale-105">
+                    <figcaption class="p-3 text-sm font-semibold text-gray-700">Haji Lane murals</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="px-6 pb-14 md:px-12 lg:px-20">
             <div class="rounded-lg border bg-white p-6">
                 <h2 class="text-2xl font-semibold">Quick Quiz</h2>
                 <p class="mt-2 text-gray-600">Which heritage district is known for Sultan Mosque and Haji Lane murals?</p>
 
                 <div class="mt-5 grid gap-3 sm:grid-cols-3">
-                    <button type="button" class="quiz-option rounded-md border border-gray-300 bg-white px-4 py-3 text-left font-semibold text-gray-800 hover:border-red-500" data-correct="false">
-                        Chinatown
-                    </button>
-                    <button type="button" class="quiz-option rounded-md border border-gray-300 bg-white px-4 py-3 text-left font-semibold text-gray-800 hover:border-red-500" data-correct="false">
-                        Little India
-                    </button>
-                    <button type="button" class="quiz-option rounded-md border border-gray-300 bg-white px-4 py-3 text-left font-semibold text-gray-800 hover:border-red-500" data-correct="true">
-                        Kampong Gelam
-                    </button>
+                    <button type="button" class="quiz-option rounded-md border border-gray-300 bg-white px-4 py-3 text-left font-semibold text-gray-800 hover:border-red-500" data-correct="false">Chinatown</button>
+                    <button type="button" class="quiz-option rounded-md border border-gray-300 bg-white px-4 py-3 text-left font-semibold text-gray-800 hover:border-red-500" data-correct="false">Little India</button>
+                    <button type="button" class="quiz-option rounded-md border border-gray-300 bg-white px-4 py-3 text-left font-semibold text-gray-800 hover:border-red-500" data-correct="true">Kampong Gelam</button>
                 </div>
 
-                <p id="quiz-feedback" class="mt-4 min-h-6 font-semibold text-gray-700">
-                    Choose one answer.
-                </p>
+                <p id="quiz-feedback" class="mt-4 min-h-6 font-semibold text-gray-700">Choose one answer.</p>
             </div>
         </section>
     </main>
