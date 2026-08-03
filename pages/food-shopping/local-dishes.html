@@ -4,30 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../../assets/js/local-dishes.js"></script>
     <script defer src="../../assets/js/navbar.js"></script>
-    <title>food-shopping</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Singapore's food culture | Singapore Tourism</title>
 </head>
 
-<body class="flex min-h-screen flex-col bg-gray-50">
+<body class="flex min-h-screen flex-col bg-gray-50 font-['Inter']">
 
+    <!-- Navigation -->
     <header class="h-16 md:h-20">
         <nav class="fixed left-0 top-0 z-50 w-full bg-white shadow-lg">
             <div class="flex h-16 md:h-20 items-center justify-between px-6 md:px-4">
                 <div class="md:ms-5">
-                    <a href="../../index.html" aria-label="Singapore Tourism home" class="flex flex-row gap-1.5 md:gap-3">
-                        <img src="../assets/images/sg.png" alt="Singapore Tourism"
+                    <a href="../index.html" aria-label="Singapore Tourism home" class="flex flex-row gap-1.5 md:gap-3">
+                        <img src="../../assets/images/sg.png" alt="Singapore Tourism"
                             class="h-9 w-9 object-cover md:h-12 md:w-12">
                         <span class="m-0 pt-0.5 text-xs font-semibold md:mt-3 md:p-0 md:text-base">Singapore <br
                                 class="md:hidden">Tourism</span>
                     </a>
                 </div>
-
+    
                 <ul class="hidden h-full items-center me-5 text-xl font-semibold md:flex md:gap-10 lg:gap-14">
                     <li id="explore-item" class="flex h-full items-center">
                         <button id="explore-trigger" type="button" aria-haspopup="true" aria-expanded="false"
@@ -43,12 +41,12 @@
                             us</a>
                     </li>
                 </ul>
-
+    
                 <button id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden">
-                    <img src="../assets/images/menu.svg" alt="Menu" class="h-6 w-6">
+                    <img src="../../assets/images/menu.svg" alt="Menu" class="h-6 w-6">
                 </button>
             </div>
-
+    
             <div id="desktop-dropdown" class="max-h-0 overflow-hidden transition-[max-height] duration-300">
                 <div class="grid grid-cols-3 ms-5 gap-22 px-6 pt-4 pb-4 text-xl lg:ms-7">
                     <section>
@@ -65,7 +63,7 @@
                                     spots</a></li>
                         </ul>
                     </section>
-
+    
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Culture &amp; Heritage</h2>
                         <ul class="mt-1 leading-7">
@@ -80,7 +78,7 @@
                                     &amp; Cultural Streets</a></li>
                         </ul>
                     </section>
-
+    
                     <section>
                         <h2 class="text-base lg:text-lg font-bold">Food &amp; Shopping</h2>
                         <ul class="mt-1 leading-7">
@@ -97,14 +95,14 @@
                     </section>
                 </div>
             </div>
-
+    
             <div id="mobile-menu" class="max-h-0 overflow-hidden bg-white transition-[max-height] duration-300 md:hidden">
                 <ul class="flex flex-col gap-3 px-6 py-5 text-lg font-semibold">
                     <li>
                         <button type="button"
                             class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
                             <span class="transition duration-75 hover:text-red-500 hover:scale-105">Attractions</span>
-                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                            <img src="../../assets/images/chevron-down-black.png" alt="chevron"
                                 class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
                         </button>
                         <ul
@@ -125,7 +123,7 @@
                             class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
                             <span class="transition duration-75 hover:text-red-500 hover:scale-105">Culture &
                                 Heritage</span>
-                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                            <img src="../../assets/images/chevron-down-black.png" alt="chevron"
                                 class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
                         </button>
                         <ul
@@ -146,7 +144,7 @@
                             class="mobile-dropdown-buttons font-bold flex justify-between text-start items-center gap-2">
                             <span class="transition duration-75 hover:text-red-500 hover:scale-105">Food &
                                 Shopping</span>
-                            <img src="../assets/images/chevron-down-black.png" alt="chevron"
+                            <img src="../../assets/images/chevron-down-black.png" alt="chevron"
                                 class="mobile-navigation-chevron w-4 h-4 transition-transform duration-300 rotate-0 mt-1">
                         </button>
                         <ul
@@ -168,12 +166,11 @@
                     <li><a href="../pages/contact-us.html"
                             class="inline-block font-bold transition duration-75 hover:text-red-500 hover:scale-105">Contact
                             us</a></li>
-
+    
                 </ul>
             </div>
         </nav>
     </header>
-
 
     <!-- ===================== HERO SECTION ===================== -->
     <section class="text-center py-12">
@@ -417,78 +414,40 @@
     <section class="mt-8">
         <h2 class="text-xl font-bold mb-6">Why Tourists Love Singapore Food</h2>
 
-        <style>
-            .flip-card {
-                width: 250px;
-                height: 150px;
-                perspective: 1000px;
-                margin: auto;
-            }
-
-            .flip-card-inner {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                transition: transform 0.6s;
-                transform-style: preserve-3d;
-            }
-
-            .flip-card:hover .flip-card-inner {
-                transform: rotateY(180deg);
-            }
-
-            .flip-card-front,
-            .flip-card-back {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-                font-weight: bold;
-            }
-
-            .flip-card-front {
-                background-color: #fef2f2;
-                /* light red */
-                color: #b91c1c;
-                /* dark red text */
-            }
-
-            .flip-card-back {
-                background-color: #fde68a;
-                /* light yellow */
-                color: #78350f;
-                /* brown text */
-                transform: rotateY(180deg);
-                padding: 10px;
-                text-align: center;
-            }
-        </style>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Card 1 -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
+            <div class="w-[250px] h-[150px] mx-auto [perspective:1000px] group">
+                <div
+                    class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+                    <!-- Front -->
+                    <div
+                        class="absolute w-full h-full flex items-center justify-center rounded-lg shadow-md font-bold bg-red-50 text-red-700 [backface-visibility:hidden]">
                         <p>Chicken Rice Fan</p>
                     </div>
-                    <div class="flip-card-back">
+
+                    <!-- Back -->
+                    <div
+                        class="absolute w-full h-full flex items-center justify-center rounded-lg shadow-md font-bold bg-yellow-200 text-yellow-900 p-2 text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
                         <p>"Best chicken rice I've ever tasted in my life!"</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
+            <div class="w-[250px] h-[150px] mx-auto [perspective:1000px] group">
+                <div
+                    class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+                    <!-- Front -->
+                    <div
+                        class="absolute w-full h-full flex items-center justify-center rounded-lg shadow-md font-bold bg-red-50 text-red-700 [backface-visibility:hidden]">
                         <p>Laksa Lover</p>
                     </div>
-                    <div class="flip-card-back">
+
+                    <!-- Back -->
+                    <div
+                        class="absolute w-full h-full flex items-center justify-center rounded-lg shadow-md font-bold bg-yellow-200 text-yellow-900 p-2 text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
                         <p>"The laksa broth is so rich and flavorful!"</p>
                     </div>
                 </div>
@@ -496,19 +455,13 @@
         </div>
     </section>
 
-    <footer class="bg-gray-800">
+    <footer class="bg-gray-800 w-full">
         <div
             class="flex flex-col items-center gap-1 p-3 text-xs text-white md:flex-row md:justify-between md:gap-0 md:p-5 md:text-sm lg:p-6 lg:text-base">
             <p>Singapore Tourism</p>
             <p>&copy; 2026. All rights reserved</p>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="../../assets/js/fs1.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
 
 </body>
 

@@ -69,14 +69,15 @@ desktopDropdown.addEventListener("mouseleave", closeDropdown)
 
     const routes = {
         "Landmarks": "pages/attractions/iconic-landmarks.html",
+        "Iconic Landmarks": "pages/attractions/iconic-landmarks.html",
         "Nature & Wildlife": "pages/attractions/nature-areas.html",
         "Photo spots": "pages/attractions/photo-spots.html",
         "Heritage Districts": "pages/culture-heritage/heritage-districts.html",
         "Religious Heritage Sites": "pages/culture-heritage/heritage-sites.html",
         "Museums & Cultural Streets": "pages/culture-heritage/museum-cultural-streets.html",
         "Singapore's food culture": "pages/food-shopping/local-dishes.html",
-        "Shopping experience": "pages/food-shopping/fs2.html",
-        "Food & Shopping tips": "pages/food-shopping/fs3.html",
+        "Shopping experience": "pages/food-shopping/shopping-areas.html",
+        "Food & Shopping tips": "pages/food-shopping/shopping-tips.html",
         "Practical tips": "pages/practical-tips.html",
         "Contact us": "pages/contact-us.html"
     }
@@ -87,6 +88,9 @@ desktopDropdown.addEventListener("mouseleave", closeDropdown)
         document.querySelectorAll("nav a").forEach(link => {
             const route = routes[link.textContent.replace(/\s+/g, " ").trim()]
             if (route) link.href = new URL(route, projectRoot).href
+            if (link.getAttribute("aria-label") === "Singapore Tourism home") {
+                link.href = new URL("index.html", projectRoot).href
+            }
         })
     }
 })()
