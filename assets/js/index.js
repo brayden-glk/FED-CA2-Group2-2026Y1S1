@@ -63,64 +63,130 @@ function typewrite(){
 
 typewrite();
 
-// Interactive Map (Home Page)
-const places = {
-    "changi-airport": {
-        title: "Changi Airport",
-        description: "One of the world's best airports, known for it's iconic waterfall",
-        link: "pages/attractions/attraction1.html",
-        img: "assets/images/changiairport.jpg"
-    },
+// Destination card stack
+// const destinations = [
+//     {
+//         name: "Chinatown",
+//         image: "assets/images/chinatown.jpeg",
+//         link: "pages/culture-heritage/heritage-districts.html"
+//     },
+//     {
+//         name: "Sentosa",
+//         image: "assets/images/banner.jpeg",
+//         link: "pages/attractions/iconic-landmarks.html"
+//     },
+//     {
+//         name: "Marina Bay",
+//         image: "assets/images/bridgebanner.jpeg",
+//         link: "pages/attractions/iconic-landmarks.html"
+//     },
+//     {
+//         name: "Little India",
+//         image: "assets/images/littleindia.jpg",
+//         link: "pages/culture-heritage/heritage-districts.html"
+//     },
+//     {
+//         name: "Kampong Gelam",
+//         image: "assets/images/kampong.jpg",
+//         link: "pages/culture-heritage/heritage-districts.html"
+//     }
+// ]
 
-    "marina-bay-sands": {
-        title: "Marina Bay Sands",
-        description: "Renowned for its distinctive three-tower design topped by the SkyPark and more",
-        link: "pages/attractions/attraction1.html",
-    },
+// const cardStack = document.querySelector("#card-stack")
+// const stackPrev = document.querySelector("#stack-prev")
+// const stackNext = document.querySelector("#stack-next")
+// const stackDots = document.querySelector("#stack-dots")
+// const stackLink = document.querySelector("#stack-link")
 
-    "chinatown": {
-        title: "Chinatown",
-        description: "Singapore's rich Chinese heritage via historic temples and colorful shophouses",
-        link: "pages/culture-heritage/webpage6.html",
-    },
+// let activeStackIndex = 0
 
-    "gardens-by-the-bay": {
-        title: "Gardens by the Bay",
-        description: "Singapore's iconic nature park featuring the Supertree Grove and stunning waterfront gardens",
-        link: "pages/attractions/attraction1.html",
-    },
-    "sentosa": {
-        title: "Sentosa",
-        description: "Sandy beaches, thrilling attractions, and world-class entertainment destinations",
-        link: "pages/attractions/attraction1.html",
-    },
+// function renderCardStack() {
+//     cardStack.innerHTML = ""
 
-    "orchard": {
-        title: "Orchard Road",
-        description: "Singapore's famous retail boulevard, home to luxury boutiques, shopping malls, and diverse dining experiences.",
-        link: "pages/food-shopping/fs1.html",
+//     destinations.forEach((place, index) => {
+//         const offset = (index - activeStackIndex + destinations.length) % destinations.length
+
+//         const card = document.createElement("article")
+//         card.className = "card-stack-item absolute left-1/2 top-1/2 w-[220px] overflow-hidden rounded-2xl border border-white/40 bg-white shadow-lg sm:w-[240px]"
+
+//         let transform = "translate(-50%, -50%) scale(0.88)"
+//         let opacity = "0"
+//         let zIndex = "0"
+
+//         if (offset === 0) {
+//             transform = "translate(-50%, -50%) scale(1) rotate(0deg)"
+//             opacity = "1"
+//             zIndex = "30"
+//         } else if (offset === 1) {
+//             transform = "translate(calc(-50% + 52px), -50%) scale(0.94) rotate(4deg)"
+//             opacity = "0.92"
+//             zIndex = "20"
+//         } else if (offset === destinations.length - 1) {
+//             transform = "translate(calc(-50% - 52px), -50%) scale(0.94) rotate(-4deg)"
+//             opacity = "0.92"
+//             zIndex = "10"
+//         }
+
+//         card.style.transform = transform
+//         card.style.opacity = opacity
+//         card.style.zIndex = zIndex
+
+//         card.innerHTML = `
+//             <img src="${place.image}" alt="${place.name}" class="h-64 w-full object-cover sm:h-72">
+//             <div class="bg-white px-4 py-3">
+//                 <h3 class="font-semibold text-gray-900">${place.name}</h3>
+//             </div>
+//         `
+
+//         cardStack.appendChild(card)
+//     })
+
+//     stackLink.href = destinations[activeStackIndex].link
+//     stackLink.textContent = `Explore ${destinations[activeStackIndex].name} →`
+
+//     stackDots.innerHTML = ""
+//     destinations.forEach((_, index) => {
+//         const dot = document.createElement("span")
+//         dot.className = `h-1.5 rounded-full transition-all duration-300 ${index === activeStackIndex ? "w-6 bg-red-500" : "w-1.5 bg-gray-300"}`
+//         stackDots.appendChild(dot)
+//     })
+// }
+
+// function moveStack(direction) {
+//     activeStackIndex = (activeStackIndex + direction + destinations.length) % destinations.length
+//     renderCardStack()
+// }
+
+// stackPrev.addEventListener("click", () => moveStack(-1))
+// stackNext.addEventListener("click", () => moveStack(1))
+
+// renderCardStack()
+
+
+
+// Heritage image slider — fixed-size slides
+const heritageSwiper = new Swiper(".heritage-swiper", {
+    loop: true,
+    // Loop when user clicks the buttons
+
+    speed: 500,
+    // Animation speed, 500 ms
+
+    spaceBetween: 16,
+    // 16px between each slide
+    
+    slidesPerView: 1.15,
+    // 1.15 of next slide is visible
+
+    breakpoints: {
+        640: { slidesPerView: 1.6 },
+        1024: { slidesPerView: 2.1 }
+    },
+    // Makes slide responsive
+
+    navigation: {
+        nextEl: ".heritage-next",
+        prevEl: ".heritage-prev"
     }
-};
-
-
-// Map hotspots and Popup
-document.querySelectorAll(".hotspot").forEach(hotspot => {
-    hotspot.addEventListener("click", function(event){
-    const place = event.target.id
-
-    document.querySelector("#title").textContent = places[place].title
-    document.querySelector("#description").textContent = places[place].description
-    document.querySelector("#link").setAttribute("href", places[place].link)
-    document.querySelector("#img-popup").setAttribute("src", places[place].img)
-
-    document.querySelector("#popup").classList.remove("opacity-0", "scale-90", "pointer-events-none")
-    document.querySelector("#popup").classList.add("scale-100")
-    document.querySelector("#dark-overlay").classList.remove("opacity-0", "pointer-events-none")
-    })
-})
-
-document.querySelector("#dark-overlay").addEventListener("click", function(){
-    document.querySelector("#popup").classList.add("opacity-0", "scale-90", "pointer-events-none")
-    document.querySelector("#popup").classList.remove("scale-100")
-    document.querySelector("#dark-overlay").classList.add("opacity-0", "pointer-events-none")
+    // Connects to the button element in HTML and allows for a next and previous button
 })

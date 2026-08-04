@@ -10,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+GB+J+Guides:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <title>Navigation</title>
+    <title>Singapore Tourism | Home</title>
+    
 </head>
 
 <body class="flex min-h-screen flex-col bg-gray-50 font-['Inter']">
@@ -35,11 +36,11 @@
                             class="border-b-2 border-transparent">Explore</button>
                     </li>
                     <li class="h-full flex items-center">
-                        <a href="../pages/practical-tips.html"
+                        <a href="pages/practical-tips.html"
                             class="border-b-2 border-transparent hover:border-red-500">Practical tips</a>
                     </li>
                     <li class="h-full flex items-center">
-                        <a href="../pages/contact-us.html"
+                        <a href="pages/contact-us.html"
                             class="border-b-2 border-transparent hover:border-red-500">Contact
                             us</a>
                     </li>
@@ -176,6 +177,8 @@
     </header>
 
     <main class="flex-1">
+
+        <!-- Hero -->
         <section class="relative h-[42vh] min-h-380px overflow-hidden md:h-[55vh] lg:h-[70vh]">
             <img src="assets/images/bridgebanner.jpeg" class="absolute inset-0 h-full w-full object-cover">
 
@@ -183,112 +186,187 @@
 
 
             <div class="absolute inset-0 flex items-center px-6 md:px-16">
-                <div id="typewriter"
-                    class="relative max-w-xl text-3xl font-semibold
-                     leading-tight text-white md:text-6xl">
-                </div>
-
-                <div id="cursor" class="ml-2 h-10 border-l-8
-                 border-white/90 md:h-14 transition-opacity duration-100"></div>
+                <div id="typewriter" class="relative max-w-xl text-3xl font-semibold leading-tight text-white md:text-6xl"></div>
+                <div id="cursor" class="ml-2 h-10 border-l-5 border-white/90 md:h-14 transition-opacity duration-100"></div>
             </div>
+
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eum distinctio voluptas corrupti labore ea necessitatibus voluptates
+                 optio ipsum ex iusto, officiis porro? Culpa, temporibus molestiae itaque libero delectus aut.</p>
         </section>
 
-        <section class="mx-auto mt-16 flex w-full max-w-6xl flex-col items-center px-2 md:mt-20 md:px-10">
-            <!--Image of Singapore-->
-            <div class="relative max-w-5xl mx-auto box-border shrink-0"> <!--shrink-0 disallows the map from shrinking-->
-                <img src="assets/images/Sg_map.png" alt="Map of Singapore"
-                    class="block h-auto w-full rounded-xl border border-gray-200">
+        <!-- Destination card stack -->
+        <!-- <section class="bg-gray-100 px-4 py-14 md:px-10 md:py-20" aria-labelledby="destinations-heading">
+            <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+                <div>
+                    <p class="text-sm font-bold uppercase tracking-[0.18em] text-red-500">Start exploring</p>
+                    <h2 id="destinations-heading" class="mt-2 text-3xl font-bold md:text-4xl">Pick a place to begin</h2>
+                    <p class="mt-3 max-w-md text-sm leading-6 text-gray-600 md:text-base">Most visitors start around the city centre, then branch out to heritage districts or Sentosa. Use the arrows to browse.</p>
 
-                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 810 510" preserveAspectRatio="none">
-
-                    <!--Changi Airport-->
-                    <circle id="changi-airport" cx="620" cy="220" r="10" fill="red" role="button"
-                        class="cursor-pointer hotspot" />
-
-                    <!--Marina Bay Sands--> 
-                    <circle id="marina-bay-sands" cx="440" cy="300" r="10" fill="red" role="button"
-                        class="cursor-pointer hotspot" />
-
-                    <!--Chinatown-->
-                    <circle id="chinatown" cx="370" cy="255" r="10" fill="red" role="button"
-                        class="cursor-pointer hotspot" />
-
-                    <!--Sentosa-->
-                    <circle id="sentosa" cx="370" cy="375" r="10" fill="red" role="button"
-                        class="cursor-pointer hotspot" />
-
-                    <!--Gardens by the Bay-->
-                    <circle id="gardens-by-the-bay" cx="400" cy="315" r="10" fill="red" role="button"
-                        class="cursor-pointer hotspot" />
-
-                    <!--Orchard-->
-                    <circle id="orchard" cx="310" cy="290" r="10" fill="red" role="button"
-                        class="cursor-pointer hotspot" />
-                </svg>
-
-                <div id="popup"
-                class="absolute inset-0 w-[90%] max-w-lg h-[50vh] md:h-[75vh] mx-auto md:p-5 gap-4
-                flex flex-col items-center bg-white transition-all duration-500 scale-80
-                 rounded-2xl opacity-0 pointer-events-none z-50 overflow-hidden">
-
-                    <div id="title" class="font-semibold text-lg md:text-3xl"></div>
-
-                    <div class="w-full overflow-y-auto flex-col flex md:gap-10 gap-5">
-                        <img id="img-popup" class="object-cover w-full max-h-50 md:max-h-100">
-                        <div id="description" class="flex-1 mt-4 text-sm md:text-lg">
-                        </div>
-
-                        <div class=" justify-end text-sm self-end">
-                            <a id="link" class="hover:text-red-500 cursor-pointer">
-                                Learn more →
-                            </a>
-                        </div>
+                    <div class="mt-6 flex items-center gap-3">
+                        <button id="stack-prev" type="button" aria-label="Previous destination"
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-700 transition hover:border-red-500 hover:text-red-500">
+                            ←
+                        </button>
+                        <button id="stack-next" type="button" aria-label="Next destination"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition hover:bg-red-500">
+                            →
+                        </button>
+                        <div id="stack-dots" class="ms-2 flex gap-1.5" aria-hidden="true"></div>
                     </div>
+
+                    <a id="stack-link" href="pages/culture-heritage/heritage-districts.html"
+                        class="mt-6 inline-block text-sm font-semibold text-red-500 transition hover:text-red-600">
+                        Explore destination →
+                    </a>
                 </div>
-        </section>
-        
-        <div id="dark-overlay"
-        class="fixed inset-0 bg-black/40 pointer-events-none opacity-0 z-40"> 
-        <!--'fixed' attaches the element to the browser viewport-->
-        <!--'pointer-events-none' prevents the invisible overlay from blocking clicks-->
-        </div>
 
-        <!-- <section class="mx-auto mb-14 mt-16 flex w-full max-w-6xl flex-col gap-6 px-5 md:mt-20 md:flex-row md:px-10">
-
-            What SG is famous for and why tourists should come
-            <div class="flex flex-1 flex-col gap-4 rounded-2xl p-7 md:p-8">
-                <p class="text-2xl font-semibold tracking-tight">Singapore's History</p>
-
-                <p class="text-base leading-7 text-gray-600">
-                    Singapore's history dates back to the 14th century as a trading port. In 1819, Sir Stamford Raffles
-                    established it as a
-                    British trading settlement, helping it grow into an important commercial hub. After gaining
-                    independence in
-                    1965,
-                    Singapore transformed into one of the world's leading cities, known for its modern skyline,
-                    multicultural
-                    society, and
-                    thriving economy. Today, it is a vibrant destination where rich heritage meets innovation.
-                </p>
-            </div>
-
-            <div class="flex flex-1 flex-col gap-4 rounded-2xl p-7 md:p-8">
-                <p class="text-2xl font-semibold tracking-tight">Why you should come</p>
-                <p class="text-base leading-7 text-gray-600">
-                    Singapore offers something for everyone. Visit iconic landmarks like Marina Bay Sands and Gardens by
-                    the
-                    Bay, enjoy
-                    delicious hawker food, and explore vibrant cultural districts such as Chinatown and Little India.
-                    With its
-                    clean, safe
-                    environment, efficient public transport, and mix of modern attractions and rich culture, Singapore
-                    is a
-                    memorable
-                    destination for every visitor.
-                </p>
+                <div id="card-stack" class="relative mx-auto h-[340px] w-full max-w-sm sm:h-[380px] sm:max-w-md" aria-live="polite"></div>
             </div>
         </section> -->
 
+        <!-- Heritage split section -->
+        <section class="mx-auto w-full max-w-6xl px-4 py-14 md:px-10 md:py-20" aria-labelledby="heritage-heading">
+            <div class="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+                <div>
+                    <h2 id="heritage-heading" class="text-3xl font-bold leading-tight md:text-4xl">Heritage.<br>Made in Singapore.</h2>
+                    <div class="mt-3 h-1 w-16 bg-red-500"></div>
+                    <p class="mt-5 text-sm leading-7 text-gray-600 md:text-base">
+                        Whether you are here for food, architecture, or older neighbourhoods, Singapore mixes Malay, Chinese, Indian, and Peranakan influences across temples, shophouses, and street markets.
+                    </p>
+                    <a href="pages/culture-heritage/heritage-districts.html"
+                        class="mt-6 inline-flex items-center gap-1 text-sm font-bold uppercase tracking-wide text-gray-900 transition hover:text-red-500">
+                        Discover cultural experiences <span class="text-red-500">→</span>
+                    </a>
+                </div>
+
+                <div class="relative min-w-0">
+                    <div class="swiper heritage-swiper overflow-hidden">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <figure class="h-72 w-full overflow-hidden rounded-lg md:h-80">
+                                    <img src="assets/images/chinatown.jpeg" alt="Chinatown lanterns and shophouses"
+                                        class="h-full w-full object-cover">
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="h-72 w-full overflow-hidden rounded-lg md:h-80">
+                                    <img src="assets/images/changiairport.jpg" alt="Jewel Changi waterfall"
+                                        class="h-full w-full object-cover">
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="h-72 w-full overflow-hidden rounded-lg md:h-80">
+                                    <img src="assets/images/haji.webp" alt="Haji Lane street art"
+                                        class="h-full w-full object-cover">
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="h-72 w-full overflow-hidden rounded-lg md:h-80">
+                                    <img src="assets/images/littleindia.jpg" alt="Little India street scene"
+                                        class="h-full w-full object-cover">
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure class="h-72 w-full overflow-hidden rounded-lg md:h-80">
+                                    <img src="assets/images/kampong.jpg" alt="Kampong Gelam shophouses"
+                                        class="h-full w-full object-cover">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex justify-end gap-2">
+                        <button type="button" aria-label="Previous photo"
+                            class="heritage-prev flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-700 transition hover:border-red-500 hover:text-red-500">
+                            ←
+                        </button>
+                        <button type="button" aria-label="Next photo"
+                            class="heritage-next flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition hover:bg-red-500">
+                            →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore categories -->
+        <section class="mx-auto w-full max-w-6xl px-4 pb-6 md:px-10" aria-labelledby="explore-heading">
+            <div class="mb-6 max-w-2xl">
+                <h2 id="explore-heading" class="text-2xl font-bold md:text-3xl">What do you want to explore?</h2>
+                <p class="mt-2 text-sm text-gray-600 md:text-base">We grouped the site the same way most visitors plan a trip — sights first, then culture and food.</p>
+            </div>
+
+            <div class="grid gap-5 md:grid-cols-3">
+                <a href="pages/attractions/iconic-landmarks.html"
+                    class="group overflow-hidden rounded-lg border bg-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                    <img src="assets/images/banner.jpeg" alt="Singapore skyline at Marina Bay"
+                        class="h-40 w-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold group-hover:text-red-500">Attractions</h3>
+                        <p class="mt-2 text-sm text-gray-600">Landmarks, nature spots, and places worth photographing.</p>
+                    </div>
+                </a>
+                <a href="pages/culture-heritage/heritage-districts.html"
+                    class="group overflow-hidden rounded-lg border bg-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                    <img src="assets/images/chinatown.jpeg" alt="Chinatown shophouses"
+                        class="h-40 w-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold group-hover:text-red-500">Culture &amp; Heritage</h3>
+                        <p class="mt-2 text-sm text-gray-600">Heritage districts, temples, museums, and older streets.</p>
+                    </div>
+                </a>
+                <a href="pages/food-shopping/local-dishes.html"
+                    class="group overflow-hidden rounded-lg border bg-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                    <img src="assets/images/hawker.jpg" alt="Hawker centre food stalls"
+                        class="h-40 w-full object-cover transition duration-300 group-hover:scale-105">
+                    <div class="p-5">
+                        <h3 class="text-lg font-semibold group-hover:text-red-500">Food &amp; Shopping</h3>
+                        <p class="mt-2 text-sm text-gray-600">Local dishes, shopping areas, and simple tips for eating out.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Quick facts Table -->
+        <section class="mx-auto mb-16 mt-14 w-[92%] max-w-5xl md:mt-16 md:w-4/5" aria-labelledby="facts-heading">
+            <div class="rounded-lg border border-gray-200 bg-white px-5 py-5 shadow-sm md:px-6 md:py-6">
+                <h2 id="facts-heading" class="text-lg font-bold md:text-xl">Before you land</h2>
+                <p class="mt-1 text-sm text-gray-600">Handy basics we kept on one page so you do not have to dig around.</p>
+
+                <div class="mt-4 overflow-x-auto">
+                    <table class="w-full min-w-[480px] border-collapse text-left text-sm md:text-base">
+                        <thead>
+                            <tr class="border-b border-gray-200 text-xs uppercase tracking-wide text-gray-500 md:text-sm">
+                                <th scope="col" class="py-2 pe-4 font-semibold">Topic</th>
+                                <th scope="col" class="py-2 font-semibold">What to know</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b border-gray-100">
+                                <th scope="row" class="py-3 pe-4 font-semibold text-gray-900">Language</th>
+                                <td class="py-3">English works almost everywhere. You will also hear Mandarin, Malay, and Tamil.</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <th scope="row" class="py-3 pe-4 font-semibold text-gray-900">Currency</th>
+                                <td class="py-3">Singapore dollar (SGD). Cards and mobile pay are common, but keep some cash for hawker stalls.</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <th scope="row" class="py-3 pe-4 font-semibold text-gray-900">Getting around</th>
+                                <td class="py-3">MRT and buses cover most tourist areas. Taxis and ride-hailing are easy for late nights.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="py-3 pe-4 font-semibold text-gray-900">Weather</th>
+                                <td class="py-3">Hot and humid year-round. Pack an umbrella — short rain showers happen often.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="mt-4 text-right text-sm">
+                    <a href="pages/practical-tips.html" class="font-semibold text-red-500 transition duration-75 hover:text-red-600">More practical tips →</a>
+                </p>
+            </div>
+        </section>
 
     </main>
 
